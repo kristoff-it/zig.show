@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+   <script type="text/javascript" src="http://livejs.com/live.js"></script>
+   <script src="assets/anime.min.js"></script> 
+   <style type="text/css">
+    @font-face {
+      font-family: 'Press Start 2P';
+      src: url('assets/PressStart2P-Regular.ttf') format('truetype');
+    }  
+      html, body {margin: 0; padding: 0;}
+      body {
+         font-family: 'Press Start 2P', cursive;
+         color: #FFFF54;
+         background-color: #131315;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+      #zig {
+        width: 340px;
+        transform: translateY(-20px);
+        filter: drop-shadow(-1px -1px 2px #131315) 
+                drop-shadow(1px -1px 2px #131315)
+                drop-shadow(-1px 1px 2px #131315)
+                drop-shadow(1px 1px 2px #131315);
+      }
+
+      #showtime{
+        transform: scale(3);
+        font-size: 1em;
+        text-shadow:
+          -1px -1px 2px #131315,  
+          1px -1px 2px #131315,
+          -1px 1px 2px #131315,
+          1px 1px 2px #131315;
+      }
+
+      #logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #top-text {
+        margin-bottom: 40px;
+      }
+
+      #video-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .button {
+        background-color: #FFFF54;
+        text-decoration: none;
+        color: #131315;
+        padding: 15px;
+        font-size: 1.8rem;
+      }
+
+      a.button:hover {
+        background-color: white;
+      }
+
+      .cf {
+        background-color: #F7A41D;
+        font-size: 1.3rem;
+      }
+
+      #next {
+        text-align: center;
+        line-height: 2em;
+      }
+      #next-episode {
+        color: white;
+        font-size: 1.2rem;
+      }
+</style>
+</head>
+<body>
+  <div style="margin-top: 50px"></div>
+  <div id="top-text">The show where members of the Zig community share code and ideas.</div>
+  <div style="margin-top: 20px"></div>
+  <div id="logo">
+    <img id="zig" src="assets/zig.svg">
+      <h1 id="showtime">
+        SHOWTIME
+      </h1>
+  </div>
+  <div style="margin-top: 25px"></div>
+  <div id="next">
+    <div id="next-episode">NEXT EPISODE</div>
+    <div>Sunday 7th of June</div>
+    <div>8am PT / 11am ET / 17.00 CET / 8:30pm IST / 11pm SGT / 0:00 JST</div>
+  </div>
+  <div style="margin-top: 50px"></div>
+  <div id="video-buttons">
+    <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
+    <div style="margin-left: 10px"></div>
+    <a class="button" style="padding:0" target="_blank" href="https://twitter.com/zigshowtime">
+      <img src="assets/twitter.svg" style="width:59px;">
+    </a>
+    <div style="margin-left: 10px"></div>
+    <a id="youtube" class="button" target="_blank" href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">YOUTUBE</a>
+  </div>
+  <div style="margin-top: 50px"></div>
+  <a class="cf button" target="_blank" href="https://forms.gle/umLuHc8y2coqjaqAA">CALL FOR SPEAKERS</a>
+  <div style="margin-top: 20px"></div>
+  <a class="cf button" target="_blank" href="https://forms.gle/koFUPdBJAPNj1wEu8">CALL FOR ART</a>
+</body>
+</html>
