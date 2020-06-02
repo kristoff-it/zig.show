@@ -102,6 +102,18 @@
     <div id="next-episode">NEXT EPISODE</div>
     <div>Sunday 7th of June</div>
     <div>8am PT / 11am ET / 17.00 CET / 8:30pm IST / 11pm SGT / 0:00 JST</div>
+    <div id="countdown"></div>
+    <script>
+      function updateCountdown() {
+        var timeLeftFromNow = timeLeft();
+        var countdownDiv = document.getElementById("countdown");
+        countdownDiv.innerHTML = timeLeftFromNow.days + " days ";
+        countdownDiv.innerHTML += timeLeftFromNow.hours + ":";
+        countdownDiv.innerHTML += timeLeftFromNow.minutes + ":";
+        countdownDiv.innerHTML += timeLeftFromNow.seconds;
+      }
+      setInterval(updateCountdown, 1000);
+    </script>
   </div>
   <div style="margin-top: 50px"></div>
   <div id="video-buttons">
