@@ -4,6 +4,7 @@
    <title>Zig Showtime</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" type="image/png" href="assets/zig-favicon.png">
+   <script src="assets/timeleft.js"></script>
    <style type="text/css">
     @font-face {
       font-family: 'Press Start 2P';
@@ -109,10 +110,17 @@
     <div id="next-episode">NEXT EPISODE</div>
     <div>Sunday 7th of June</div>
     <div>8am PT / 11am ET / 17.00 CET / 8:30pm IST / 11pm SGT / 0:00 JST</div>
-    <div></div>
-    <script type="text/javascript">
-      let date = "isosomething date";
-
+    <div id="countdown"></div>
+    <script>
+      function updateCountdown() {
+        var timeLeftFromNow = timeLeft();
+        var countdownDiv = document.getElementById("countdown");
+        countdownDiv.innerHTML = timeLeftFromNow.days + " days ";
+        countdownDiv.innerHTML += timeLeftFromNow.hours + ":";
+        countdownDiv.innerHTML += timeLeftFromNow.minutes + ":";
+        countdownDiv.innerHTML += timeLeftFromNow.seconds;
+      }
+      setInterval(updateCountdown, 1000);
     </script>
   </div>
   <div style="margin-top: 45px"></div>
