@@ -93,6 +93,12 @@
         color: white;
         font-size: 1.2rem;
       }
+
+      #countdown {
+        color: white;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
 </style>
 </head>
 <body>
@@ -105,25 +111,25 @@
         SHOWTIME
       </h1>
   </div>
-  <div style="margin-top: 8px"></div>
+  <div style="margin-top: 18px"></div>
   <div id="next">
     <div id="next-episode">NEXT EPISODE</div>
     <div>Sunday 7th of June</div>
-    <div>8am PT / 11am ET / 17.00 CET / 8:30pm IST / 11pm SGT / 0:00 JST</div>
-    <div id="countdown"></div>
+    <div>8am PT / 11am ET / 17.00 CET / 8:30pm IST / 11pm SGT / 11:59pm JST</div>
+    <div id="countdown" style="margin-top: 10px"></div>
     <script>
       function updateCountdown() {
-        var timeLeftFromNow = timeLeft();
+        var timeLeftFromNow = timeLeft("2020-06-07T15:00:00.000Z");
         var countdownDiv = document.getElementById("countdown");
         countdownDiv.innerHTML = timeLeftFromNow.days + " days ";
-        countdownDiv.innerHTML += timeLeftFromNow.hours + ":";
-        countdownDiv.innerHTML += timeLeftFromNow.minutes + ":";
-        countdownDiv.innerHTML += timeLeftFromNow.seconds;
+        countdownDiv.innerHTML += timeLeftFromNow.hours.toString().padStart(2, '0') + ":";
+        countdownDiv.innerHTML += timeLeftFromNow.minutes.toString().padStart(2, '0') + ":";
+        countdownDiv.innerHTML += timeLeftFromNow.seconds.toString().padStart(2, '0');
       }
       setInterval(updateCountdown, 1000);
     </script>
   </div>
-  <div style="margin-top: 45px"></div>
+  <div style="margin-top: 35px"></div>
   <div id="video-buttons">
     <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
     <a class="button" style="padding:0" target="_blank" href="https://twitter.com/zigshowtime">
