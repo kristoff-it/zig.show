@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title></title>
+   <title>Zig Showtime</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" type="image/png" href="assets/zig-favicon.png">
    <style type="text/css">
     @font-face {
@@ -19,22 +20,25 @@
          align-items: center;
       }
       #zig {
-        width: 340px;
+        width: 70vw;
+        max-width: 340px;
         transform: translateY(-20px);
-        filter: drop-shadow(-1px -1px 2px #131315) 
+        filter: drop-shadow(-1px -1px 2px #131315)
                 drop-shadow(1px -1px 2px #131315)
                 drop-shadow(-1px 1px 2px #131315)
                 drop-shadow(1px 1px 2px #131315);
       }
 
       #showtime{
-        transform: scale(3);
-        font-size: 1em;
+        font-size: min(3em, 10vw);
+        margin: 0;
+        transform: translateY(-8px);
+        filter: drop-shadow(-1px -1px 2px #131315);
         text-shadow:
-          -1px -1px 2px #131315,  
-          1px -1px 2px #131315,
-          -1px 1px 2px #131315,
-          1px 1px 2px #131315;
+          -3px -3px 6px #131315,
+          3px -3px 6px #131315,
+          -1px 3px 6px #131315,
+          3px 3px 6px #131315;
       }
 
       #logo {
@@ -54,7 +58,8 @@
       #video-buttons {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        flex-wrap: wrap;
       }
 
       .button {
@@ -63,6 +68,7 @@
         color: #131315;
         padding: 15px;
         font-size: 1.8rem;
+        margin: 5px;
       }
 
       a.button:hover {
@@ -72,6 +78,8 @@
       .cf {
         background-color: #F7A41D;
         font-size: 1.3rem;
+        margin-top: 20px;
+        text-align: center;
       }
 
       #next {
@@ -96,7 +104,7 @@
         SHOWTIME
       </h1>
   </div>
-  <div style="margin-top: 25px"></div>
+  <div style="margin-top: 8px"></div>
   <div id="next">
     <div id="next-episode">NEXT EPISODE</div>
     <div>Sunday 7th of June</div>
@@ -107,19 +115,17 @@
 
     </script>
   </div>
-  <div style="margin-top: 50px"></div>
+  <div style="margin-top: 45px"></div>
   <div id="video-buttons">
     <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
-    <div style="margin-left: 10px"></div>
     <a class="button" style="padding:0" target="_blank" href="https://twitter.com/zigshowtime">
       <img src="assets/twitter.svg" style="width:59px;">
     </a>
-    <div style="margin-left: 10px"></div>
     <a id="youtube" class="button" target="_blank" href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">YOUTUBE</a>
   </div>
-  <div style="margin-top: 50px"></div>
+  <div style="margin-top: 25px"></div>
   <a class="cf button" target="_blank" href="https://forms.gle/umLuHc8y2coqjaqAA">CALL FOR SPEAKERS</a>
-  <div style="margin-top: 20px"></div>
   <a class="cf button" target="_blank" href="https://forms.gle/koFUPdBJAPNj1wEu8">CALL FOR ART</a>
+  <div style="margin-top: 50px"></div>
 </body>
 </html>
