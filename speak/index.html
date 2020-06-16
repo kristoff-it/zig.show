@@ -3,12 +3,12 @@
 <head>
    <title>Zig Showtime</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="icon" type="image/png" href="/assets/zig-favicon.png">
+   <link rel="icon" type="image/png" href="../assets/zig-favicon.png">
    <script src="assets/timeleft.js"></script>
    <style type="text/css">
     @font-face {
       font-family: 'Press Start 2P';
-      src: url('/assets/PressStart2P-Regular.ttf') format('truetype');
+      src: url('../assets/PressStart2P-Regular.ttf') format('truetype');
     }  
       html, body {margin: 0; padding: 0;}
       body {
@@ -101,10 +101,13 @@
           padding: .5em;
           border: 1px solid #aaa;
           font-size: 1.2rem;
+          /* Works on Chrome, but not Firefox.
+             SHAMEFUL DISPLAY.       
           display: flex;
           flex-direction: row-reverse;
           justify-content: space-between;
           align-items: center;
+          */
       }
 
       details[open] {
@@ -118,6 +121,7 @@
       }
 
       details > summary::-webkit-details-marker {
+        display: none;
       }
 
       details a {
@@ -129,7 +133,7 @@
 <body>
   <div style="margin-top: 20px"></div>
   <div id="logo">
-    <img id="zig" src="/assets/zig.svg">
+    <img id="zig" src="../assets/zig.svg">
       <h1 id="showtime">
         SHOWTIME
       </h1>
