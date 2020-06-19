@@ -22,6 +22,7 @@
       }
       #zig {
         width: 70vw;
+        height: auto;
         max-width: 340px;
         transform: translateY(-20px);
         filter: drop-shadow(-1px -1px 2px #131315)
@@ -97,7 +98,6 @@
       #countdown {
         color: white;
         font-size: 1.2rem;
-        text-transform: uppercase;
       }
 </style>
 </head>
@@ -106,7 +106,7 @@
   <div id="top-text">The show where members of the Zig community share code and ideas.</div>
   <div style="margin-top: 20px"></div>
   <div id="logo">
-    <img id="zig" src="assets/zig.svg">
+    <img id="zig" src="assets/zig.svg" width=154 height=140>
       <h1 id="showtime">
         SHOWTIME
       </h1>
@@ -121,12 +121,15 @@
       function updateCountdown() {
         var timeLeftFromNow = timeLeft("2020-06-21T16:00:00.000Z");
         var countdownDiv = document.getElementById("countdown");
-        countdownDiv.innerHTML = timeLeftFromNow.days + " days ";
-        countdownDiv.innerHTML += timeLeftFromNow.hours.toString().padStart(2, '0') + ":";
-        countdownDiv.innerHTML += timeLeftFromNow.minutes.toString().padStart(2, '0') + ":";
-        countdownDiv.innerHTML += timeLeftFromNow.seconds.toString().padStart(2, '0');
+        const s = timeLeftFromNow.days === 1 ? "" : "S";
+        countdownDiv.textContent =
+            timeLeftFromNow.days + " DAY"+s+" "
+          + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
+          + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
+          + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
       }
       setInterval(updateCountdown, 1000);
+      updateCountdown();
     </script>
   </div>
   <div style="margin-top: 35px"></div>
