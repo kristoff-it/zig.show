@@ -53,7 +53,8 @@
       #top-text {
         margin-bottom: 40px;
         text-align: center;
-        line-height: 2em;
+        line-height: 2rem;
+        font-size: 1rem;
         max-width: 80vw;
       }
 
@@ -90,7 +91,7 @@
         max-width: 70vw;
       }
 
-      #next-episode {
+      .next-episode {
         color: white;
         font-size: 1.2rem;
       }
@@ -113,7 +114,7 @@
   </div>
   <div style="margin-top: 18px"></div>
   <div id="next">
-    <div id="next-episode">NEXT EPISODE</div>
+    <div class="next-episode">NEXT EPISODE</div>
     <div>Saturday 11th of July</div>
     <div>3pm PT / 6pm ET / 23.59 CET / 3:30am IST (Sun) / 6am SGT (Sun) / 7am JST (Sun)</div>
     <div id="countdown" style="margin-top: 10px"></div>
@@ -131,6 +132,22 @@
       setInterval(updateCountdown, 1000);
       updateCountdown();
     </script>
+    <div style="margin-top: 18px"></div>
+    <div class="next-episode">
+      <span style="color:#FFFF54">--></span>
+        NO SPEAKERS
+      <span style="color:#FFFF54"><--</span>
+    </div>
+    <div class="next-episode">
+      <span style="color:#FFFF54">--></span>
+        BIG ZFS ANNOUNCEMENTS
+      <span style="color:#FFFF54"><--</span>
+    </div>
+    <div class="next-episode">
+      <span style="color:#FFFF54">--></span>
+        DON'T MISS IT!
+      <span style="color:#FFFF54"><--</span>
+    </div>
   </div>
   <div style="margin-top: 35px"></div>
   <div id="video-buttons">
