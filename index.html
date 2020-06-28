@@ -54,7 +54,7 @@
         margin-bottom: 40px;
         text-align: center;
         line-height: 2rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
         max-width: 80vw;
       }
 
@@ -91,7 +91,12 @@
         max-width: 70vw;
       }
 
-      .next-episode {
+      #next-episode {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .extra {
         color: white;
         font-size: 1.2rem;
       }
@@ -99,6 +104,48 @@
       #countdown {
         color: white;
         font-size: 1.2rem;
+      }
+      #dates-small {
+        display: none;
+      }
+
+      #dates-small ul {
+        padding-left: 0;
+      }
+
+      .arrow {
+        color: #FFFF54;
+      }
+
+      @media only screen 
+        and (max-device-width: 812px) {
+
+          #next {
+            max-width: 85vw;
+          }
+
+          #top-text {
+            font-size: 0.7rem;
+            line-height: 1rem;
+          } 
+          #dates-small {
+            display: block;
+          }
+
+          #dates-big {
+            display: none;
+          }
+
+          .extra {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-align: center;
+            border-bottom: 3px solid #FFFF54;
+          }
+
+          .arrow {
+            display: none;
+          }
       }
 </style>
 </head>
@@ -114,9 +161,19 @@
   </div>
   <div style="margin-top: 18px"></div>
   <div id="next">
-    <div class="next-episode">NEXT EPISODE</div>
+    <div id="next-episode">NEXT EPISODE</div>
     <div>Saturday 11th of July</div>
-    <div>3pm PT / 6pm ET / 23.59 CET / 3:30am IST (Sun) / 6am SGT (Sun) / 7am JST (Sun)</div>
+    <div id="dates-big">3pm PT / 6pm ET / 23.59 CET / 3:30am IST (Sun) / 6am SGT (Sun) / 7am JST (Sun)</div>
+    <div id="dates-small">
+      <ul>
+        <li class="date">3pm PT </li>
+        <li class="date">6pm ET </li>
+        <li class="date">23.59 CET</li>
+        <li class="date">3:30am IST (Sun)</li>
+        <li class="date">6am SGT (Sun)</li>
+        <li class="date">7am JST (Sun)</li>
+      </ul>
+    </div>
     <div id="countdown" style="margin-top: 10px"></div>
     <script>
       function updateCountdown() {
@@ -133,20 +190,20 @@
       updateCountdown();
     </script>
     <div style="margin-top: 18px"></div>
-    <div class="next-episode">
-      <span style="color:#FFFF54">--></span>
+    <div class="extra">
+      <span class="arrow">--></span>
         NO SPEAKERS
-      <span style="color:#FFFF54"><--</span>
+      <span class="arrow"><--</span>
     </div>
-    <div class="next-episode">
-      <span style="color:#FFFF54">--></span>
+    <div class="extra">
+      <span class="arrow">--></span>
         BIG ZFS ANNOUNCEMENTS
-      <span style="color:#FFFF54"><--</span>
+      <span class="arrow"><--</span>
     </div>
-    <div class="next-episode">
-      <span style="color:#FFFF54">--></span>
+    <div class="extra">
+      <span class="arrow">--></span>
         DON'T MISS IT!
-      <span style="color:#FFFF54"><--</span>
+      <span class="arrow"><--</span>
     </div>
   </div>
   <div style="margin-top: 35px"></div>
