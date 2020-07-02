@@ -105,6 +105,36 @@
         color: white;
         font-size: 1.2rem;
       }
+
+      .blink {
+        animation: 2s linear infinite condemned_blink_effect;
+      }
+
+      /* for Safari 4.0 - 8.0 */
+      @-webkit-keyframes condemned_blink_effect { 
+        0% {
+          visibility: hidden;
+        }
+        50% {
+          visibility: hidden;
+        }
+        100% {
+          visibility: visible;
+        }
+      }
+
+      @keyframes condemned_blink_effect {
+        0% {
+          visibility: hidden;
+        }
+        50% {
+          visibility: hidden;
+        }
+        100% {
+          visibility: visible;
+        }
+      }
+
       #dates-small {
         display: none;
       }
@@ -117,9 +147,6 @@
       #dates-small ul li {
         border-bottom: 3px solid #F7A41D;
       }
-
-
-                  
 
       .arrow {
         color: #FFFF54;
@@ -187,12 +214,18 @@
       function updateCountdown() {
         var timeLeftFromNow = timeLeft("2020-07-11T22:00:00.000Z");
         var countdownDiv = document.getElementById("countdown");
-        const s = timeLeftFromNow.days === 1 ? "" : "S";
-        countdownDiv.textContent =
-            timeLeftFromNow.days + " DAY"+s+" "
-          + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
-          + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
-          + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
+        if (timeLeftFromNow.days == 0 && timeLeftFromNow.hours == 0 
+            && timeLeftFromNow.minutes == 0 && timeLeftFromNow.seconds == 0) {
+          countdownDiv.textContent = "LIVE NOW!"
+          countdownDiv.classList.add("blink");
+        } else {
+          const s = timeLeftFromNow.days === 1 ? "" : "S";
+          countdownDiv.textContent =
+              timeLeftFromNow.days + " DAY"+s+" "
+            + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
+            + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
+            + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
+        }
       }
       setInterval(updateCountdown, 1000);
       updateCountdown();
