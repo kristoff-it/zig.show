@@ -48,6 +48,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        display: none;
       }
 
       #top-text {
@@ -171,6 +172,14 @@
             display: none;
           }
 
+          #twitch-embed {
+            display: none;
+          }
+
+          #logo {
+            display: block;
+          }
+          
           .extra {
             font-size: 1.2rem;
             margin-top: 20px;
@@ -189,6 +198,12 @@
   <div id="top-text">The show where members of the Zig community share code and ideas.</div>
   <div style="margin-top: 20px"></div>
   <div id="twitch-embed"></div> 
+  <div id="logo">
+    <img id="zig" src="assets/zig.svg" width=154 height=140>
+      <h1 id="showtime">
+        SHOWTIME
+      </h1>
+  </div>
   <script src="https://embed.twitch.tv/embed/v1.js"></script>
   <script type="text/javascript">
     new Twitch.Embed("twitch-embed", {
