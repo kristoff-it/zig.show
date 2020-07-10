@@ -44,11 +44,9 @@
       }
 
       #logo {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        display: none;
       }
 
       #top-text {
@@ -136,10 +134,6 @@
         }
       }
 
-      #dates-small {
-        display: none;
-      }
-
       #dates-small ul {
         padding-left: 0;
         list-style-type: none;
@@ -153,8 +147,25 @@
         color: #FFFF54;
       }
 
+      .mobile {
+        display: none;
+      }
+
+      #zsf {
+        line-height: 1.2rem;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
       @media only screen 
         and (max-device-width: 812px) {
+          .mobile {
+            display: flex;
+          }
+
+          .nomobile {
+            display: none;
+          }
 
           #next {
             max-width: 85vw;
@@ -176,10 +187,6 @@
             display: none;
           }
 
-          #logo {
-            display: flex;
-          }
-
           .extra {
             font-size: 1.2rem;
             margin-top: 20px;
@@ -190,15 +197,22 @@
           .arrow {
             display: none;
           }
+
+          #next-episode {
+            display: none;
+          }
       }
 </style>
 </head>
 <body>
   <div style="margin-top: 50px"></div>
   <div id="top-text">The show where members of the Zig community share code and ideas.</div>
-  <div style="margin-top: 20px"></div>
+  <div class="extra" style="border-bottom: 0; line-height: 1.2rem; margin-left: 10%; margin-right: 10%;">
+      ANNOUNCING THE ZIG SOFTWARE FOUNDATION!
+  </div>
+  <div style="margin-top: 50px"></div>
   <div id="twitch-embed"></div> 
-  <div id="logo">
+  <div id="logo" class="mobile">
     <img id="zig" src="assets/zig.svg" width=154 height=140>
       <h1 id="showtime">
         SHOWTIME
@@ -216,8 +230,8 @@
   <div id="next">
     <div id="next-episode">NEXT EPISODE</div>
     <div>Saturday 11th of July</div>
-    <div id="dates-big">3pm PT / 6pm ET / 23.59 CET / 3:30am IST (Sun) / 6am SGT (Sun) / 7am JST (Sun)</div>
-    <div id="dates-small">
+    <div id="dates-big" class="nomobile">3pm PT / 6pm ET / 23.59 CET / 3:30am IST (Sun) / 6am SGT (Sun) / 7am JST (Sun)</div>
+    <div id="dates-small" class="mobile">
       <ul>
         <li class="date">3pm PT </li>
         <li class="date">6pm ET </li>
@@ -227,7 +241,7 @@
         <li class="date">7am JST (Sun)</li>
       </ul>
     </div>
-    <div id="countdown" style="margin-top: 10px"></div>
+    <div id="countdown" style="margin-top: 25px"></div>
     <script>
       function updateCountdown() {
         var timeLeftFromNow = timeLeft("2020-07-11T22:00:00.000Z");
@@ -248,23 +262,8 @@
       setInterval(updateCountdown, 1000);
       updateCountdown();
     </script>
-    <div style="margin-top: 18px"></div>
-    <div class="extra">
-      <span class="arrow">--></span>
-        NO SPEAKERS
-      <span class="arrow"><--</span>
-    </div>
-    <div class="extra">
-      <span class="arrow">--></span>
-        BIG ZSF ANNOUNCEMENTS
-      <span class="arrow"><--</span>
-    </div>
-    <div class="extra">
-      <span class="arrow">--></span>
-        DON'T MISS IT!
-      <span class="arrow"><--</span>
-    </div>
   </div>
+  
   <div style="margin-top: 35px"></div>
   <div id="video-buttons">
     <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
