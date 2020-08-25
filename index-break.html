@@ -196,10 +196,11 @@
   </div>
   <div style="margin-top: 18px"></div>
   <div id="next">
-    <div id="next-episode">NEXT EPISODE</div>
-    <div>Saturday 11th of July</div>
-    <div id="dates-big">3pm PT / 6pm ET / 23.59 CET / 3:30am IST (Sun) / 6am SGT (Sun) / 7am JST (Sun)</div>
-    <div id="dates-small">
+    <div id="next-episode">WE'RE ON A BREAK</div>
+    <div>but the call for speakers is still open :)</div>
+    <!-- <div>Saturday 11th of July</div> -->
+<!--     <div id="dates-big">3pm PT / 6pm ET / 23.59 CET / 3:30am IST (Sun) / 6am SGT (Sun) / 7am JST (Sun)</div> -->
+<!--     <div id="dates-small">
       <ul>
         <li class="date">3pm PT </li>
         <li class="date">6pm ET </li>
@@ -208,7 +209,7 @@
         <li class="date">6am SGT (Sun)</li>
         <li class="date">7am JST (Sun)</li>
       </ul>
-    </div>
+    </div> -->
     <div id="countdown" style="margin-top: 10px"></div>
     <script>
       function updateCountdown() {
@@ -216,7 +217,7 @@
         var countdownDiv = document.getElementById("countdown");
         if (timeLeftFromNow.days == 0 && timeLeftFromNow.hours == 0 
             && timeLeftFromNow.minutes == 0 && timeLeftFromNow.seconds == 0) {
-          countdownDiv.textContent = "LIVE NOW!"
+          countdownDiv.textContent = "SEE YOU IN SEPTEMBER!"
           countdownDiv.classList.add("blink");
         } else {
           const s = timeLeftFromNow.days === 1 ? "" : "S";
@@ -229,23 +230,23 @@
       }
       setInterval(updateCountdown, 1000);
       updateCountdown();
+      // <div style="margin-top: 18px"></div>
+      // <div class="extra">
+      //   <span class="arrow">--></span>
+      //     NO SPEAKERS
+      //   <span class="arrow"><--</span>
+      // </div>
+      // <div class="extra">
+      //   <span class="arrow">--></span>
+      //     BIG ZSF ANNOUNCEMENTS
+      //   <span class="arrow"><--</span>
+      // </div>
+      // <div class="extra">
+      //   <span class="arrow">--></span>
+      //     DON'T MISS IT!
+      //   <span class="arrow"><--</span>
+      // </div>
     </script>
-    <div style="margin-top: 18px"></div>
-    <div class="extra">
-      <span class="arrow">--></span>
-        NO SPEAKERS
-      <span class="arrow"><--</span>
-    </div>
-    <div class="extra">
-      <span class="arrow">--></span>
-        BIG ZSF ANNOUNCEMENTS
-      <span class="arrow"><--</span>
-    </div>
-    <div class="extra">
-      <span class="arrow">--></span>
-        DON'T MISS IT!
-      <span class="arrow"><--</span>
-    </div>
   </div>
   <div style="margin-top: 35px"></div>
   <div id="video-buttons">
