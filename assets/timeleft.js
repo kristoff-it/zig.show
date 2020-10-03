@@ -1,5 +1,18 @@
 function timeLeft(toDate = "2020-06-07T15:00:00.000Z") {
-    var totalSeconds = Math.max(new Date(toDate) - new Date, 0) / 1000;
+    var totalSeconds = (new Date(toDate) - new Date) / 1000;
+
+    // are we past the target by more than 2h?
+    if (totalSeconds < (-60 * 60 * 2)) {
+        // :)
+        return false;
+    }
+
+    // Are past the target at all?
+    if (totalSeconds < 0) {
+        return true;
+    }
+
+    totalSeconds = Math.max(totalSeconds, 0);
 
     var days = Math.floor(totalSeconds / 86400);
     totalSeconds -= days * 86400;

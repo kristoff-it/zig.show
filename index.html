@@ -211,10 +211,16 @@
     <div id="countdown" style="margin-top: 10px"></div>
     <script>
       function updateCountdown() {
-        var timeLeftFromNow = timeLeft("2020-10-10T20:00:00.000+02:00");
+        var timeLeftFromNow = timeLeft("2020-10-03T23:35:00.000+02:00");
         var countdownDiv = document.getElementById("countdown");
-        if (timeLeftFromNow.days == 0 && timeLeftFromNow.hours == 0 
-            && timeLeftFromNow.minutes == 0 && timeLeftFromNow.seconds == 0) {
+
+        if (timeLeftFromNow === false) {
+          countdownDiv.textContent = "NEXT SHOWTIME WILL BE ANNOUNCED SOON!"
+          countdownDiv.classList.remove("blink");
+          return;
+        }
+
+        if (timeLeftFromNow === true) {
           countdownDiv.textContent = "LIVE NOW!"
           countdownDiv.classList.add("blink");
         } else {
@@ -224,9 +230,16 @@
             + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
             + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
             + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
-        }
+        } 
+
+        setInterval(runUpdateTimeout, 1000);
       }
-      setInterval(updateCountdown, 1000);
+
+      function runUpdateTimeout() {
+        // Be a good webdev and don't burn people's laptop batteries.
+        window.requestAnimationFrame(updateCountdown);
+      }
+
       updateCountdown();
     </script>
   </div>
