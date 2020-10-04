@@ -232,7 +232,7 @@
             + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
         } 
 
-        setInterval(runUpdateTimeout, 1000);
+        setTimeout(runUpdateTimeout, 1000);
       }
 
       function runUpdateTimeout() {
