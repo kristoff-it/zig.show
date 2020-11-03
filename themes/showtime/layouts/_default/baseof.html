@@ -3,7 +3,9 @@
 <head>
    <title>Zig SHOWTIME</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="icon" type="image/png" href="assets/zig-favicon.png">
+   <link rel="icon" type="image/png" href="zig-favicon.png">
+   {{ $style := resources.Get "style.css" | minify | fingerprint }}
+   <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
    {{ block "head" . }} {{ end }}
 </head>
     <body>

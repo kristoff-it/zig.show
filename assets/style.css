@@ -1,0 +1,177 @@
+
+@font-face {
+ font-family: 'Press Start 2P';
+ src: url('/PressStart2P-Regular.ttf') format('truetype');
+}  
+ html, body {margin: 0; padding: 0;}
+ body {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFFF54;
+    background-color: #131315;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ #zig {
+   width: 70vw;
+   height: auto;
+   max-width: 340px;
+   transform: translateY(-20px);
+   filter: drop-shadow(-1px -1px 2px #131315)
+           drop-shadow(1px -1px 2px #131315)
+           drop-shadow(-1px 1px 2px #131315)
+           drop-shadow(1px 1px 2px #131315);
+ }
+
+ #showtime{
+   font-size: min(3em, 10vw);
+   margin: 0;
+   transform: translateY(-8px);
+   filter: drop-shadow(-1px -1px 2px #131315);
+   text-shadow:
+     -3px -3px 6px #131315,
+     3px -3px 6px #131315,
+     -1px 3px 6px #131315,
+     3px 3px 6px #131315;
+ }
+
+ #logo {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ #top-text {
+   margin-bottom: 40px;
+   text-align: center;
+   line-height: 2rem;
+   font-size: 0.9rem;
+   max-width: 80vw;
+ }
+
+ #video-buttons {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+
+ .button {
+   background-color: #FFFF54;
+   text-decoration: none;
+   color: #131315;
+   padding: 15px;
+   font-size: 1.8rem;
+   margin: 5px;
+ }
+
+ a.button:hover {
+   background-color: white;
+ }
+
+ .cf {
+   background-color: #F7A41D;
+   font-size: 1.3rem;
+   margin-top: 20px;
+   text-align: center;
+ }
+
+ #next {
+   text-align: center;
+   line-height: 2rem;
+   max-width: 70vw;
+ }
+
+ #next-episode {
+   color: white;
+   font-size: 1.2rem;
+ }
+
+ .extra {
+   color: white;
+   font-size: 1.2rem;
+ }
+
+ #countdown {
+   color: white;
+   font-size: 1.2rem;
+ }
+
+ .blink {
+   animation: 2s linear infinite condemned_blink_effect;
+ }
+
+ /* for Safari 4.0 - 8.0 */
+ @-webkit-keyframes condemned_blink_effect { 
+   0% {
+     visibility: hidden;
+   }
+   50% {
+     visibility: hidden;
+   }
+   100% {
+     visibility: visible;
+   }
+ }
+
+ @keyframes condemned_blink_effect {
+   0% {
+     visibility: hidden;
+   }
+   50% {
+     visibility: hidden;
+   }
+   100% {
+     visibility: visible;
+   }
+ }
+
+ #dates-small {
+   display: none;
+ }
+
+ #dates-small ul {
+   padding-left: 0;
+   list-style-type: none;
+ }
+
+ #dates-small ul li {
+   border-bottom: 3px solid #F7A41D;
+ }
+
+ .arrow {
+   color: #FFFF54;
+ }
+
+ @media only screen 
+   and (max-device-width: 812px) {
+
+     #next {
+       max-width: 85vw;
+     }
+
+     #top-text {
+       font-size: 0.7rem;
+       line-height: 1rem;
+     } 
+     #dates-small {
+       display: block;
+     }
+
+     #dates-big {
+       display: none;
+     }
+
+     .extra {
+       font-size: 1.2rem;
+       margin-top: 20px;
+       text-align: center;
+       border-bottom: 3px solid #FFFF54;
+     }
+
+     .arrow {
+       display: none;
+     }
+ }

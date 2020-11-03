@@ -1,0 +1,10 @@
+{
+	"newsletter": "url",
+	"full_ep": "https://youtube.com",
+	"talks": [
+		{
+			"title": "Talk1",
+			"yt": "https//youtube.com"
+		}
+	]
+}

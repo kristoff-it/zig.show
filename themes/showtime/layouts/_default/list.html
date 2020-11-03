@@ -1,1 +1,11 @@
-as
+{{ define "head" }}{{end}}
+{{ define "main" }}
+<ul>
+{{ range .Pages }}
+    <li>
+        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        {{.Params}}
+    </li>
+{{ end }}
+</ul>
+{{ end }}
