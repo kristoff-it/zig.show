@@ -1,146 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-   <title>Zig Showtime</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="icon" type="image/png" href="../assets/zig-favicon.png">
-   <script src="assets/timeleft.js"></script>
-   <style type="text/css">
-    @font-face {
-      font-family: 'Press Start 2P';
-      src: url('../assets/PressStart2P-Regular.ttf') format('truetype');
-    }  
-      html, body {margin: 0; padding: 0;}
-      body {
-         font-family: 'Press Start 2P', cursive;
-         color: #FFFF54;
-         background-color: #131315;
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-      }
+---
+hide_top_sentence: true
+---
+<style type="text/css">
+	#logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0.5);
+    }
+	#question-container {
+	  min-width: 60vw;
+	  max-width: min(90vw, 500px);
+	}
 
-      #zig {
-        width: 70vw;
-        max-width: 340px;
-        transform: translateY(-20px);
-        filter: drop-shadow(-1px -1px 2px #131315)
-                drop-shadow(1px -1px 2px #131315)
-                drop-shadow(-1px 1px 2px #131315)
-                drop-shadow(1px 1px 2px #131315);
-      }
+	details {
+	    font-family: sans-serif;
+	    font-size: 1.5rem;
+	    border-radius: 4px;
+	    padding: .5em .5em 0;
+	    margin-bottom: 2rem;
+	}
 
-      #showtime{
-        font-size: min(3em, 10vw);
-        margin: 0;
-        transform: translateY(-8px);
-        filter: drop-shadow(-1px -1px 2px #131315);
-        text-shadow:
-          -3px -3px 6px #131315,
-          3px -3px 6px #131315,
-          -1px 3px 6px #131315,
-          3px 3px 6px #131315;
-      }
+	summary {
+	    cursor: pointer;
+	    font-family: 'Press Start 2P', cursive;
+	    line-height: 1.4rem;
+	    font-weight: bold;
+	    margin: -.5em -.5em 0;
+	    padding: .5em;
+	    border: 1px solid #aaa;
+	    font-size: 1.2rem;
+	    letter-spacing: 1px;
+	    /* Works on Chrome, but not Firefox.
+	       SHAMEFUL DISPLAY.       
+	    display: flex;
+	    flex-direction: row-reverse;
+	    justify-content: space-between;
+	    align-items: center;
+	    */
+	}
 
-      #logo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: scale(0.5);
-      }
+	details[open] {
+	    padding: .5em;
+	    color: white;
+	}
 
+	details[open] summary {
+	    border-bottom: 1px solid #aaa;
+	    margin-bottom: .5em;
+	}
 
-      #video-buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
+	details > summary::-webkit-details-marker {
+	  display: none;
+	}
 
-      .button {
-        background-color: #FFFF54;
-        text-decoration: none;
-        color: #131315;
-        padding: 15px;
-        font-size: 1.8rem;
-        margin: 5px;
-      }
-
-      a.button:hover {
-        background-color: white;
-      }
-
-
-      .cf {
-        background-color: #F7A41D;
-        font-size: 1.3rem;
-        margin-top: 20px;
-        text-align: center;
-      }
-
-      #question-container {
-        min-width: 60vw;
-        max-width: min(90vw, 500px);
-      }
-
-      details {
-          font-family: sans-serif;
-          font-size: 1.5rem;
-          border-radius: 4px;
-          padding: .5em .5em 0;
-          margin-bottom: 2rem;
-      }
-
-      summary {
-          cursor: pointer;
-          font-family: 'Press Start 2P', cursive;
-          line-height: 1.4rem;
-          font-weight: bold;
-          margin: -.5em -.5em 0;
-          padding: .5em;
-          border: 1px solid #aaa;
-          font-size: 1.2rem;
-          letter-spacing: 1px;
-          /* Works on Chrome, but not Firefox.
-             SHAMEFUL DISPLAY.       
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: space-between;
-          align-items: center;
-          */
-      }
-
-      details[open] {
-          padding: .5em;
-          color: white;
-      }
-
-      details[open] summary {
-          border-bottom: 1px solid #aaa;
-          margin-bottom: .5em;
-      }
-
-      details > summary::-webkit-details-marker {
-        display: none;
-      }
-
-      details a {
-        color: #FFFF54;
-      }
-
+	details a {
+	  color: #FFFF54;
+	}
 </style>
-</head>
-<body>
-  <div style="margin-top: 20px"></div>
-  <div id="logo">
-    <img id="zig" src="../assets/zig.svg">
-      <h1 id="showtime">
-        SHOWTIME
-      </h1>
-  </div>
-  <div id="question-container">
+<div id="question-container">
     <details>
       <summary>What is Zig SHOWTIME?</summary>
       <p>
@@ -178,7 +97,6 @@
         <a href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">
           all talks are archived on YouTube</a>.
       </p>
-
     </details>
     <details>
       <summary>I've never spoken publicly before.</summary>
@@ -193,7 +111,6 @@
         own speaking ability is imprecise. People tend to stress over their flaws and
         underestimate their strenghts much more than the public usually does.
       </p>
-
       <p>
         As the organizer of the show, I'm happy to have new speakers present even 
         (and especially) if they're not at the peak of their public speaking ability.
@@ -201,13 +118,11 @@
         your growth if that means that as you improve, you will also give better talks
         in this show. In other words, from my point of view it's a rational investment.
       </p>
-
       <p>
         If you feel you would not be accepted by the public on the grounds of not being a native speaker / 
         gender / sexual orientation / race / ..., rest assured that the Zig community is welcoming
         to all kinds of people, and I'll be present throughout the whole presentation.
       </p>
-
     </details>
     <details>
       <summary>What are the prerequisites for speaking?</summary>
@@ -267,6 +182,3 @@
   </div>
   <div style="margin-top: 25px"></div>
   <a class="cf button" target="_blank" href="https://forms.gle/umLuHc8y2coqjaqAA">CALL FOR SPEAKERS</a>
-  <div style="margin-top: 50px"></div>
-</body>
-</html>

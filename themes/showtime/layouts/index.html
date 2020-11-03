@@ -1,0 +1,256 @@
+{{ define "head" }}
+   {{ $timeleft := resources.Get "timeleft.js" | minify | fingerprint }}
+   <script src="{{ $timeleft.Permalink }}"></script>
+   <style type="text/css">
+    @font-face {
+      font-family: 'Press Start 2P';
+      src: url('PressStart2P-Regular.ttf') format('truetype');
+    }  
+      html, body {margin: 0; padding: 0;}
+      body {
+         font-family: 'Press Start 2P', cursive;
+         color: #FFFF54;
+         background-color: #131315;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+      #zig {
+        width: 70vw;
+        height: auto;
+        max-width: 340px;
+        transform: translateY(-20px);
+        filter: drop-shadow(-1px -1px 2px #131315)
+                drop-shadow(1px -1px 2px #131315)
+                drop-shadow(-1px 1px 2px #131315)
+                drop-shadow(1px 1px 2px #131315);
+      }
+
+      #showtime{
+        font-size: min(3em, 10vw);
+        margin: 0;
+        transform: translateY(-8px);
+        filter: drop-shadow(-1px -1px 2px #131315);
+        text-shadow:
+          -3px -3px 6px #131315,
+          3px -3px 6px #131315,
+          -1px 3px 6px #131315,
+          3px 3px 6px #131315;
+      }
+
+      #logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #top-text {
+        margin-bottom: 40px;
+        text-align: center;
+        line-height: 2rem;
+        font-size: 0.9rem;
+        max-width: 80vw;
+      }
+
+      #video-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        background-color: #FFFF54;
+        text-decoration: none;
+        color: #131315;
+        padding: 15px;
+        font-size: 1.8rem;
+        margin: 5px;
+      }
+
+      a.button:hover {
+        background-color: white;
+      }
+
+      .cf {
+        background-color: #F7A41D;
+        font-size: 1.3rem;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      #next {
+        text-align: center;
+        line-height: 2em;
+        max-width: 70vw;
+      }
+
+      #next-episode {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .extra {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      #countdown {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .blink {
+        animation: 2s linear infinite condemned_blink_effect;
+      }
+
+      /* for Safari 4.0 - 8.0 */
+      @-webkit-keyframes condemned_blink_effect { 
+        0% {
+          visibility: hidden;
+        }
+        50% {
+          visibility: hidden;
+        }
+        100% {
+          visibility: visible;
+        }
+      }
+
+      @keyframes condemned_blink_effect {
+        0% {
+          visibility: hidden;
+        }
+        50% {
+          visibility: hidden;
+        }
+        100% {
+          visibility: visible;
+        }
+      }
+
+      #dates-small {
+        display: none;
+      }
+
+      #dates-small ul {
+        padding-left: 0;
+        list-style-type: none;
+      }
+
+      #dates-small ul li {
+        border-bottom: 3px solid #F7A41D;
+      }
+
+      .arrow {
+        color: #FFFF54;
+      }
+
+      @media only screen 
+        and (max-device-width: 812px) {
+
+          #next {
+            max-width: 85vw;
+          }
+
+          #top-text {
+            font-size: 0.7rem;
+            line-height: 1rem;
+          } 
+          #dates-small {
+            display: block;
+          }
+
+          #dates-big {
+            display: none;
+          }
+
+          .extra {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-align: center;
+            border-bottom: 3px solid #FFFF54;
+          }
+
+          .arrow {
+            display: none;
+          }
+      }
+</style>
+{{ end }}
+
+{{ define "main" }}
+  <div style="margin-top: 50px"></div>
+  <div id="top-text">The show where members of the Zig community share code and ideas.</div>
+  <div style="margin-top: 20px"></div>
+  <div id="logo">
+    <img id="zig" src="zig.svg" width=154 height=140>
+      <h1 id="showtime">
+        SHOWTIME
+      </h1>
+  </div>
+  <div style="margin-top: 18px"></div>
+  <div id="next">
+    <div id="next-episode">NEXT EPISODE</div>
+    <div>Sunday 1st of November</div>
+    <div id="dates-big">10am CST / 17.00 CET / 9:30pm IST / 11.59pm SGT / 1am JST (Mon)</div>
+    <div id="dates-small">
+      <ul>
+        <li class="date">10am CST</li>
+        <li class="date">17.00 CET</li>
+        <li class="date">9:30pm IST</li>
+        <li class="date">11.59pm SGT</li>
+        <li class="date">1am JST (Mon)</li>
+      </ul>
+    </div>
+    <div id="countdown" style="margin-top: 10px"></div>
+    <script>
+      function updateCountdown() {
+        var timeLeftFromNow = timeLeft("2020-11-01T17:00:00.000+01:00");
+        var countdownDiv = document.getElementById("countdown");
+
+        if (timeLeftFromNow === false) {
+          countdownDiv.textContent = "NEXT SHOWTIME WILL BE ANNOUNCED SOON!"
+          countdownDiv.classList.remove("blink");
+          return;
+        }
+
+        if (timeLeftFromNow === true) {
+          countdownDiv.textContent = "LIVE NOW!"
+          countdownDiv.classList.add("blink");
+        } else {
+          const s = timeLeftFromNow.days === 1 ? "" : "S";
+          countdownDiv.textContent =
+              timeLeftFromNow.days + " DAY"+s+" "
+            + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
+            + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
+            + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
+        } 
+
+        setTimeout(runUpdateTimeout, 1000);
+      }
+
+      function runUpdateTimeout() {
+        // Be a good webdev and don't burn people's laptop batteries.
+        window.requestAnimationFrame(updateCountdown);
+      }
+
+      updateCountdown();
+    </script>
+  </div>
+  <div style="margin-top: 35px"></div>
+  <div id="video-buttons">
+    <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
+    <a class="button" style="padding:0" target="_blank" href="https://twitter.com/zigshowtime">
+      <img src="twitter.svg" style="width:59px;">
+    </a>
+    <a id="youtube" class="button" target="_blank" href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">YOUTUBE</a>
+  </div>
+  <a class="button" href="/newsletter">NEWSLETTER</a>
+  <div style="margin-top: 25px"></div>
+  <a class="cf button" target="_blank" href="/speak">APPLY TO SPEAK</a>
+  <a class="cf button" target="_blank" href="https://forms.gle/koFUPdBJAPNj1wEu8">CALL FOR ART</a>
+  <div style="margin-top: 50px"></div>
+{{ end }}
