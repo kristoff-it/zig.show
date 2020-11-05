@@ -3,5 +3,6 @@ languageCode = "en-us"
 title = "Zig SHOWTIME"
 theme = "showtime"
 disableKinds = ["taxonomy", "term"]
+
 [markup.goldmark.renderer]
-unsafe = true
+	unsafe = true

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="generator" content="Hugo 0.76.5" />
+   <title>Zig SHOWTIME</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/png" href="zig-favicon.png">
+   
+   <link rel="stylesheet" type="text/css" href="https://zig.show/style.min.cf917676c215153ceb8cee238d3b16d7ba6ade59785f4b7b28af0f7f058bc30b.css">
+   
+   
+   <script src="https://zig.show/timeleft.min.917284ccf5c83aa2d1bc7000343d60c77d57d7b9d473587e5ce658f015fc6435.js"></script>
+
+</head>
+    <body>
+        
+  <div style="margin-top: 50px"></div>
+  <div id="top-text">The show where members of the Zig community share code and ideas.</div>
+  <div style="margin-top: 20px"></div>
+  <div id="logo">
+    <img id="zig" src="zig.svg" width=154 height=140>
+      <h1 id="showtime">
+        SHOWTIME
+      </h1>
+  </div>
+  <div style="margin-top: 18px"></div>
+  <div id="next">
+    <div id="next-episode">NEXT EPISODE</div>
+    <div>Sunday 8th of November</div>
+    <div id="dates-big">2pm CST / 21.00 CET / 1:30am IST (Mon) / 4am SGT (Mon) / 5am JST (Mon)</div>
+    <div id="dates-small">
+      <ul>
+        <li class="date">2pm CST</li>
+        <li class="date">21.00 CET</li>
+        <li class="date">1:30am IST (Mon)</li>
+        <li class="date">4am SGT (Mon)</li>
+        <li class="date">5am JST (Mon)</li>
+      </ul>
+    </div>
+    <div id="countdown" style="margin-top: 10px"></div>
+    <script>
+      function updateCountdown() {
+        var timeLeftFromNow = timeLeft("2020-11-08T21:00:00.000+01:00");
+        var countdownDiv = document.getElementById("countdown");
+
+        if (timeLeftFromNow === false) {
+          countdownDiv.textContent = "NEXT SHOWTIME WILL BE ANNOUNCED SOON!"
+          countdownDiv.classList.remove("blink");
+          return;
+        }
+
+        if (timeLeftFromNow === true) {
+          countdownDiv.textContent = "LIVE NOW!"
+          countdownDiv.classList.add("blink");
+        } else {
+          const s = timeLeftFromNow.days === 1 ? "" : "S";
+          countdownDiv.textContent =
+              timeLeftFromNow.days + " DAY"+s+" "
+            + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
+            + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
+            + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
+        } 
+
+        setTimeout(runUpdateTimeout, 1000);
+      }
+
+      function runUpdateTimeout() {
+        
+        window.requestAnimationFrame(updateCountdown);
+      }
+
+      updateCountdown();
+    </script>
+  </div>
+  <div style="margin-top: 35px"></div>
+  <div id="video-buttons">
+    <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
+    <a class="button" style="padding:0" target="_blank" href="https://twitter.com/zigshowtime">
+      <img src="twitter.svg" style="width:59px;">
+    </a>
+    <a id="youtube" class="button" target="_blank" href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">YOUTUBE</a>
+  </div>
+  <a class="button" href="/newsletter">NEWSLETTER</a>
+  <div style="margin-top: 25px"></div>
+  <a class="cf button" target="_blank" href="/speak">APPLY TO SPEAK</a>
+  <a class="cf button" target="_blank" href="https://forms.gle/koFUPdBJAPNj1wEu8">CALL FOR ART</a>
+  <div style="margin-top: 50px"></div>
+
+    </body>
+</html>

@@ -1,4 +1,6 @@
 ---
+title: ""
+draft: false
 hide_top_sentence: true
 ---
 <style type="text/css">
