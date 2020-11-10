@@ -16,21 +16,48 @@
   <div style="margin-top: 18px"></div>
   <div id="next">
     <div id="next-episode">NEXT EPISODE</div>
-    <div>Sunday 8th of November</div>
-    <div id="dates-big">2pm CST / 21.00 CET / 1:30am IST (Mon) / 4am SGT (Mon) / 5am JST (Mon)</div>
+    {{$next_show := (time .Params.next_show)}}
+    {{$suffix := "th"}}
+    {{ if in (slice "1" "21" "31") ($next_show.Format "2") }}
+      {{ $suffix = "st" }}
+    {{ else if in (slice "2" "22") ($next_show.Format "2") }}
+      {{ $suffix = "nd" }}
+    {{ else if in (slice "3" "23") ($next_show.Format "2") }}
+      {{ $suffix = "rd" }}
+    {{ end }}
+    <div>{{$next_show.Format (printf "Monday 2%s of January" $suffix)}}</div>
+    <div id="dates-big">
+        {{ $cst := $next_show.In (time "2020-01-01T00:00:00.000-06:00").Location}}
+        {{ $cst_format := cond (eq $cst.Day $next_show.Day) "3:04pm CST" "3:04pm CST (Mon)" }}
+        {{ $cst.Format $cst_format }}
+      / 
+        {{ $next_show.Format "15.04" }} CET 
+      / 
+        {{ $ist := $next_show.In (time "2020-01-01T00:00:00.000+05:30").Location}}
+        {{ $ist_format := cond (eq $ist.Day $next_show.Day) "3:04pm IST" "3:04pm IST (Mon)" }}
+        {{ $ist.Format $ist_format }}
+      / 
+        {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000+08:00").Location}}
+        {{ $sgt_format := cond (eq $sgt.Day $next_show.Day) "3:04pm SGT" "3:04pm SGT (Mon)" }}
+        {{ $sgt.Format $sgt_format }}
+      / 
+        {{ $jst := $next_show.In (time "2020-01-01T00:00:00.000+09:00").Location}}
+        {{ $jst_format := cond (eq $jst.Day $next_show.Day) "3:04pm JST" "3:04pm JST (Mon)" }}
+        {{ $jst.Format $jst_format }}
+    </div>
     <div id="dates-small">
       <ul>
-        <li class="date">2pm CST</li>
-        <li class="date">21.00 CET</li>
-        <li class="date">1:30am IST (Mon)</li>
-        <li class="date">4am SGT (Mon)</li>
-        <li class="date">5am JST (Mon)</li>
+        <li class="date">{{ $cst.Format $cst_format }}</li>
+        <li class="date">{{ $next_show.Format "15.04" }} CET</li>
+        <li class="date">{{ $ist.Format $ist_format }}</li>
+        <li class="date">{{ $sgt.Format $sgt_format }}</li>
+        <li class="date">{{ $jst.Format $jst_format }}</li>
       </ul>
     </div>
     <div id="countdown" style="margin-top: 10px"></div>
     <script>
       function updateCountdown() {
-        var timeLeftFromNow = timeLeft("2020-11-08T21:00:00.000+01:00");
+        var timeLeftFromNow = timeLeft({{.Params.next_show}});
         var countdownDiv = document.getElementById("countdown");
 
         if (timeLeftFromNow === false) {
