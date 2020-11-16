@@ -16,8 +16,8 @@
   <div style="margin-top: 18px"></div>
   <div id="next">
     <div id="next-episode">NEXT EPISODE</div>
-    {{$next_show := (time .Params.next_show)}}
-    {{$suffix := "th"}}
+    {{ $next_show := (time .Params.next_show) }}
+    {{ $suffix := "th" }}
     {{ if in (slice "1" "21" "31") ($next_show.Format "2") }}
       {{ $suffix = "st" }}
     {{ else if in (slice "2" "22") ($next_show.Format "2") }}
@@ -27,21 +27,21 @@
     {{ end }}
     <div>{{$next_show.Format (printf "Monday 2%s of January" $suffix)}}</div>
     <div id="dates-big">
-        {{ $cst := $next_show.In (time "2020-01-01T00:00:00.000-06:00").Location}}
+        {{ $cst := $next_show.In (time "2020-01-01T00:00:00.000-06:00").Location }}
         {{ $cst_format := cond (eq $cst.Day $next_show.Day) "3:04pm CST" "3:04pm CST (Mon)" }}
         {{ $cst.Format $cst_format }}
       / 
         {{ $next_show.Format "15.04" }} CET 
       / 
-        {{ $ist := $next_show.In (time "2020-01-01T00:00:00.000+05:30").Location}}
+        {{ $ist := $next_show.In (time "2020-01-01T00:00:00.000+05:30").Location }}
         {{ $ist_format := cond (eq $ist.Day $next_show.Day) "3:04pm IST" "3:04pm IST (Mon)" }}
         {{ $ist.Format $ist_format }}
       / 
-        {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000+08:00").Location}}
+        {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000+08:00").Location }}
         {{ $sgt_format := cond (eq $sgt.Day $next_show.Day) "3:04pm SGT" "3:04pm SGT (Mon)" }}
         {{ $sgt.Format $sgt_format }}
       / 
-        {{ $jst := $next_show.In (time "2020-01-01T00:00:00.000+09:00").Location}}
+        {{ $jst := $next_show.In (time "2020-01-01T00:00:00.000+09:00").Location }}
         {{ $jst_format := cond (eq $jst.Day $next_show.Day) "3:04pm JST" "3:04pm JST (Mon)" }}
         {{ $jst.Format $jst_format }}
     </div>
