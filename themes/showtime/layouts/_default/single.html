@@ -1,3 +1,11 @@
+{{ define "title" }}
+	{{ if ne .Params.title "" }}
+		{{ .Params.title }}
+	{{ else }}
+		Zig SHOWTIME
+	{{ end }}
+{{ end}}
+
 {{ define "head" }}
 
 {{ end }}
@@ -8,12 +16,14 @@
   <div id="top-text">The show where members of the Zig community share code and ideas.</div>
   {{ end }}
   <div style="margin-top: 20px"></div>
+  {{ if ne .Params.hide_logo true }}
   <div id="logo">
     <img id="zig" src="/zig.svg" width=154 height=140>
       <h1 id="showtime">
         SHOWTIME
       </h1>
   </div>
+  {{ end }}
 <div style="margin-top: 18px"></div>
 {{ .Content }}
 <div style="margin-top: 50px"></div>

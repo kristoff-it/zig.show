@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Zig SHOWTIME</title>
+   <title>{{ block "title" . }}Zig SHOWTIME{{ end }}</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" type="image/png" href="zig-favicon.png">
    {{ $style := resources.Get "style.css" | minify | fingerprint }}
