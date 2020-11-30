@@ -31,15 +31,15 @@
         {{ $cst_format := cond (eq $cst.Day $next_show.Day) "3:04pm CST" "3:04pm CST (Mon)" }}
         {{ $cst.Format $cst_format }}
       / 
+        {{ $utc := $next_show.In (time "2020-01-01T00:00:00.000+00:00").Location }}
+        {{ $utc_format := cond (eq $utc.Day $next_show.Day) "3:04pm UTC" "3:04pm UTC (Mon)" }}
+        {{ $utc.Format $utc_format }}
+      / 
         {{ $next_show.Format "15.04" }} CET 
       / 
         {{ $ist := $next_show.In (time "2020-01-01T00:00:00.000+05:30").Location }}
         {{ $ist_format := cond (eq $ist.Day $next_show.Day) "3:04pm IST" "3:04pm IST (Mon)" }}
         {{ $ist.Format $ist_format }}
-      / 
-        {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000+08:00").Location }}
-        {{ $sgt_format := cond (eq $sgt.Day $next_show.Day) "3:04pm SGT" "3:04pm SGT (Mon)" }}
-        {{ $sgt.Format $sgt_format }}
       / 
         {{ $jst := $next_show.In (time "2020-01-01T00:00:00.000+09:00").Location }}
         {{ $jst_format := cond (eq $jst.Day $next_show.Day) "3:04pm JST" "3:04pm JST (Mon)" }}
@@ -48,8 +48,11 @@
     <div id="dates-small">
       <ul>
         <li class="date">{{ $cst.Format $cst_format }}</li>
+        <li class="date">{{ $utc.Format $utc_format }}</li>
         <li class="date">{{ $next_show.Format "15.04" }} CET</li>
         <li class="date">{{ $ist.Format $ist_format }}</li>
+        {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000+08:00").Location }}
+        {{ $sgt_format := cond (eq $sgt.Day $next_show.Day) "3:04pm SGT" "3:04pm SGT (Mon)" }}
         <li class="date">{{ $sgt.Format $sgt_format }}</li>
         <li class="date">{{ $jst.Format $jst_format }}</li>
       </ul>
