@@ -19,7 +19,7 @@ I'll be doing a dedicated stream every day at the following time:
 <strong>10am PST / 12pm CST / 1pm EST / 7pm UTC / 8pm CET</strong> 
 </p>
 
-Ideally, it's going a 20 minute adventure, Ziggy: we get in, solve the challenge, and then come back.
+Ideally, it's going to be a 20 minute adventure, Ziggy: we get in, solve the challenge, and then come back.
 
 As soon as I solve the challenge *(or give up?)* I'll end the stream.
 
