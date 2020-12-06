@@ -11,6 +11,19 @@ hide_logo: true
 
 I've added myself to our [private leaderboard](https://old.reddit.com/r/Zig/comments/jzdnyj/advent_of_code_2020_ziguana_leaderboard/), and I'm going to try to solve all challenges [live on Twitch](https://twitch.tv/kristoff_it). 
 
+<div style="display:flex;flex-direction:column;border: 2px solid white; padding: 1em; align-self:center; text-align: center;">
+    You can find all the recordins on YouTube. <br>
+    There's also a dedicated playlist.
+
+<div style="display:flex;justify-content:space-around;align-self: center;flex-wrap:wrap;margin-top:1em;">
+<a id="youtube" class="button" target="_blank" href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">YOUTUBE</a>
+<a id="youtube" class="button" target="_blank" href="https://www.youtube.com/watch?v=IcJnvRE1nDc&list=PL5AY2Vv6EsfQ35qeY1M-kkQXMjbJ1wqbJ">PLAYLIST</a>
+    
+</div>
+
+
+</div>
+
 I heard it gets pretty hard going forward so let's see how far I can get.
 
 I'll be doing a dedicated stream every day at the following time:

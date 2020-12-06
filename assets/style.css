@@ -68,7 +68,7 @@
  }
 
  a.button:hover {
-   background-color: white;
+   background-color: white !important;
  }
 
  .cf {
