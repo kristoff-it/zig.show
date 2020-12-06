@@ -1,6 +1,7 @@
 p {
 	color: #ddd;
 	text-align: justify;
+    line-height: 1.2
 }
 
 em {
@@ -29,6 +30,6 @@ a {
 @media only screen 
    and (max-device-width: 812px) {
    	p {
-   		text-align: center;
+   		text-align: left;
    	}
 }
