@@ -18,5 +18,5 @@ Watch the show to learn about interesting projects and join the discord server t
 
 <div style="display:flex;justify-content:space-around;align-self: center;flex-wrap:wrap;margin-top:1em;">
 
-<a id="youtube" class="button" target="_blank" href="https://discord.gg/QTJdmGHBYt">JOIN US</a>
+<a id="youtube" class="button" target="_blank" href="https://discord.com/invite/B73sGxF">JOIN US</a>
 </div>
