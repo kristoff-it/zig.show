@@ -28,7 +28,7 @@
     <div>{{$next_show.Format (printf "Monday 2%s of January" $suffix)}}</div>
     <div id="dates-big">
         {{ $cst := $next_show.In (time "2020-01-01T00:00:00.000-05:00").Location }}
-        {{ $cst_format := cond (eq $cst.Day $next_show.Day) "3:04pm CST" "3:04pm CDT (Mon)" }}
+        {{ $cst_format := cond (eq $cst.Day $next_show.Day) "3:04pm CDT" "3:04pm CDT (Mon)" }}
         {{ $cst.Format $cst_format }}
       / 
         {{ $utc := $next_show.In (time "2020-01-01T00:00:00.000+00:00").Location }}
