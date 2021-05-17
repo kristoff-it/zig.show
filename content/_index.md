@@ -1,7 +1,7 @@
 ---
 title: ""
 draft: false
-next_show: "2021-04-25T07:00:00.000"
-where: "Pacific/Auckland"
+next_show: "2021-05-22T20:00:00.000"
+where: "Europe/Rome"
 layout: "index"
 ---
