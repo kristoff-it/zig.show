@@ -7,8 +7,12 @@ p {
     line-height: 1.2;
 }
 
-strong, b {
+strong {
     color: #ffff54;
+}
+
+b {
+    color: #fff;
 }
 
 em {
