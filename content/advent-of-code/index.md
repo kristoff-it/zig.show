@@ -6,6 +6,11 @@ hide_logo: true
 ---
 <link rel="stylesheet" type="text/css" href="./style.css">
 
+# Advent of Code 2021
+[Advent of Code](https://adventofcode.com/) is an Advent calendar of programming puzzles. 
+
+It has yet to be announced at the moment of writing but I'll probably try to solve it [live on Twitch](https://twitch.tv/kristoff_it) like last year :^)
+
 # Advent of Code 2020
 [Advent of Code](https://adventofcode.com/) is an Advent calendar of programming puzzles.
 
