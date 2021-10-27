@@ -81,6 +81,14 @@
    text-align: center;
  }
 
+ #show-title {
+   text-align: center;
+   line-height: 2rem;
+   max-width: 70vw;
+   font-size:  2rem;
+   text-transform: uppercase;
+ }
+
  #next {
    text-align: center;
    line-height: 2rem;

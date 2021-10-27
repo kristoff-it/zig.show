@@ -16,6 +16,9 @@
   <div style="margin-top: 18px"></div>
   <div id="next">
     <div id="next-episode">NEXT EPISODE</div>
+  <div style="margin-top: 5px"></div>
+    <div id="show-title">{{.Params.show_title}}</div>
+  <div style="margin-top: 18px"></div>
     {{ $next_show := (time .Params.next_show .Params.where) }}
     {{ $cst := $next_show.In (time "2020-01-01T00:00:00.000" "America/Chicago").Location }}
     
