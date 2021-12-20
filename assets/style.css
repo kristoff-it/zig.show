@@ -89,6 +89,15 @@
    text-transform: uppercase;
  }
 
+ #show-type {
+  color:  white;
+ }
+ 
+ #show-guest {
+  color:  white;
+  
+ }
+
  #next {
    text-align: center;
    line-height: 2rem;
