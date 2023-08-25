@@ -1,7 +1,7 @@
 ---
 title: ""
+layout: speak
 draft: false
-hide_top_sentence: true
 ---
 <style type="text/css">
 	#logo {
@@ -67,37 +67,7 @@ hide_top_sentence: true
       <p>
         Zig SHOWTIME is a live-streamed show that airs on Twitch where (mostly) 
         members of the Zig community present on a topic and take questions from
-        the viewers. Every episode features two speakers.
-      </p>
-      <p>
-        <a href="https://youtu.be/Unq712gqu2U">
-          Link to the first episode.
-        </a> 
-        <br>
-        <a href="https://kristoff.it/blog/future-online-meetups">
-          Here you can read more about the concept.
-        </a> 
-      </p>
-    </details>
-    <details>
-      <summary>Why should I speak?</summary>
-      <p>
-        From your point of view, speaking should be an activity that you choose to
-        perform for enjoyment, personal growth or a mix of the two.
-      </p>
-      <p>
-        We often hear that becoming a better communicator is an important "soft skill"
-        to have, but it's rarely the case that companies really support that effort. 
-        Speaking at events like Zig SHOWTIME can really help.
-      </p>
-      <p>
-        From the point of view of the community, we need to make it easier for people
-        interested in Zig to be excited and learn more about the language. 
-        <br>
-        Zig SHOWTIME is an opportunity to have fun during the live stream, 
-        but also create something useful thanks to the fact that 
-        <a href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">
-          all talks are archived on YouTube</a>.
+        the viewers.     
       </p>
     </details>
     <details>
@@ -105,26 +75,6 @@ hide_top_sentence: true
       Don't worry, we accept first-time speakers and if you point out that you might
       need help, we'll be happy to support you. As of now we've aired 3 episodes and
       for a few of the speakers that was the first time they spoke publicly.
-    </details>
-    <details>
-      <summary>I fear I might not be a good speaker.</summary>
-      <p>
-        If you're not an experienced speaker, chances are that your estimate of your 
-        own speaking ability is imprecise. People tend to stress over their flaws and
-        underestimate their strenghts much more than the public usually does.
-      </p>
-      <p>
-        As the organizer of the show, I'm happy to have new speakers present even 
-        (and especially) if they're not at the peak of their public speaking ability.
-        To become a better speaker you need experience, and I'd be happy to support
-        your growth if that means that as you improve, you will also give better talks
-        in this show. In other words, from my point of view it's a rational investment.
-      </p>
-      <p>
-        If you feel you would not be accepted by the public on the grounds of not being a native speaker / 
-        gender / sexual orientation / race / ..., rest assured that the Zig community is welcoming
-        to all kinds of people, and I'll be present throughout the whole presentation.
-      </p>
     </details>
     <details>
       <summary>What are the prerequisites for speaking?</summary>
@@ -144,11 +94,11 @@ hide_top_sentence: true
       <p>
         Finally, you will probably share slides or some code. For that you will need a connection
         that can support that video stream. As of now, we're using 
-        <a href="https://laplace.madeby.monster/">https://laplace.madeby.monster/</a>.
+        <a href="https://share.zig.show/">https://share.zig.show/</a>.
       </p>
     </details>
     <details>
-      <summary>What can I speak about?</summary>
+      <summary>What can I talk about?</summary>
       <p>
         Clearly Zig SHOWTIME focuses on talks around Zig, but we're also open to talks about topics that
         are adjacent to Zig, like {systems, embedded, low-level} programming, WebAssembly, just to name 
@@ -171,11 +121,8 @@ hide_top_sentence: true
     <details>
       <summary>How does the submission process work?</summary>
       <p>
-        Fill the form linked at the bottom of this page. As soon as I can, I will get in 
-        contact with you to schedule your talk. In the Google form you will be asked for your
-        availability on either Saturday or Sunday at varying times. These are just indicative times,
-        when it will come to schedule your talk I will work with you to make sure we can find a date
-        and time that works for you (and the other speaker).
+        Fill the form linked at the bottom of this page. I will get in 
+        contact with you to schedule your talk as soon as I can.
       </p>
       <p>
         The show doesn't air always at the same time. We change it depending on the needs of the speakers.
@@ -183,4 +130,4 @@ hide_top_sentence: true
     </details>
   </div>
   <div style="margin-top: 25px"></div>
-  <a class="cf button" target="_blank" href="https://forms.gle/umLuHc8y2coqjaqAA">CALL FOR SPEAKERS</a>
+  <a class="cf button" target="_blank" href="https://forms.gle/umLuHc8y2coqjaqAA">SUBMISSION FORM</a>

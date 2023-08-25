@@ -1,11 +1,58 @@
-{{ define "head" }}{{end}}
 {{ define "main" }}
-<ul>
-{{ range .Pages }}
-    <li>
-        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-        {{.Params}}
-    </li>
-{{ end }}
-</ul>
+  <div style="margin-top: 50px"></div>
+  {{ if ne .Params.hide_logo true }}
+  <div id="logo">
+    <img id="zig-small" src="/zig.svg" width=77 height=70>
+      <h1 id="showtime-small">
+        SHOWTIME
+      </h1>
+  </div>
+  {{ end }}
+  <h1>Episode Archive</h1>
+  <div> 
+    
+  </div>
+  {{ range $episode := .Pages.ByDate.Reverse }}
+      {{ $params := $episode.Params}}
+      <div style="margin-top: 50px"></div>
+      <div class="next">
+      <div style="margin-top: 5px"></div>
+  <div style="color:white; font-size:0.7rem; margin-bottom:0;text-align:center;">
+      EPISODE #{{$episode.File.BaseFileName}}
+  </div>
+        <div id="show-title"><a href="{{$episode.RelPermalink}}">{{$params.title}}</a></div>
+    {{ if $params.subtitle }}
+      <div id="show-subtitle">{{$params.subtitle}}</div>
+    {{ end }}
+        <div style="magin-top: 0; padding-top: 0;"> {{ $episode.Date | time.Format "January 2, 2006" }} </div>
+        <div>
+          <span id="show-type">
+            {{if eq $params.type "talk"}}
+            by
+            {{end}}
+            {{if eq $params.type "interview"}}
+            with
+            {{end}}
+          </span>
+          <span id="show-guest">
+          {{$params.author}}
+          </span>
+        </div>
+        <div>
+          {{ if gt $episode.Date time.Now }}
+          <span><i>Episode scheduled,
+           <a href="https://twitch.tv/kristoff_it" target="_blank">catch it live</a>!</i></span>
+          {{end}}
+        </div>
+      </div>
+  {{ end }}
+  <div style="margin-top: 30px"></div>
+  <hr style="width: 600px;"/>
+  <div style="margin-top: 10px"></div>
+  <h2>Season 1</h2>
+  <div style="text-align:center;max-width:70vw;color:white;">
+    You can find all the Season 1 episodes in a 
+    <a href="https://www.youtube.com/watch?v=Unq712gqu2U&list=PL5AY2Vv6EsfREBKlX-WIrahKOGCCj-FuC" target="_blank">dedicated YouTube playlist</a>.
+  </div>
+      <div style="margin-top: 50px"></div>
 {{ end }}

@@ -4,9 +4,10 @@
 {{ end }}
 
 {{ define "main" }}
+  {{ $ep_list := .GetPage "episodes" }}
+  {{ $episode := (index $ep_list.Pages.ByDate.Reverse 0) }}
+  {{ $params := $episode.Params}}
   <div style="margin-top: 50px"></div>
-  <div id="top-text">A show and community for makers.</div>
-  <div style="margin-top: 20px"></div>
   <div id="logo">
     <img id="zig" src="zig.svg" width=154 height=140>
       <h1 id="showtime">
@@ -15,118 +16,45 @@
   </div>
   <div style="margin-top: 18px"></div>
   <div id="next">
-    <div id="next-episode">NEXT EPISODE</div>
+    <div id="next-episode">
+    {{ if gt $episode.Date time.Now }}NEXT{{else}}LAST{{end}} EPISODE</div>
   <div style="margin-top: 5px"></div>
-    <div id="show-title">{{.Params.show_title}}</div>
+    <div id="show-title"><a href="{{$episode.RelPermalink}}">{{$params.title}}</a></div>
+    {{ if $params.subtitle }}
+      <div id="show-subtitle">{{$params.subtitle}}</div>
+    {{ end }}
     <div>
       <span id="show-type">
-        {{if eq .Params.show_type "talk"}}
+        {{if eq $params.type "talk"}}
         by
         {{end}}
-        {{if eq .Params.show_type "interview"}}
+        {{if eq $params.type "interview"}}
         with
         {{end}}
       </span>
       <span id="show-guest">
-      {{.Params.show_guest}}
+      {{$params.author}}
       </span>
     </div>
-  <div style="margin-top: 18px"></div>
-    {{ $next_show := (time .Params.next_show .Params.where) }}
-    {{ $cst := $next_show.In (time "2020-01-01T00:00:00.000" "America/Chicago").Location }}
-    
-    {{ $suffix := "th" }}
-    {{ if in (slice "1" "21" "31") ($cst.Format "2") }}
-      {{ $suffix = "st" }}
-    {{ else if in (slice "2" "22") ($cst.Format "2") }}
-      {{ $suffix = "nd" }}
-    {{ else if in (slice "3" "23") ($cst.Format "2") }}
-      {{ $suffix = "rd" }}
-    {{ end }}
-    <div>{{$cst.Format (printf "Monday 2%s of January" $suffix)}}</div>
-    <div id="dates-big">
-        {{ $cst_format := cond (eq $cst.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
-        {{ $cst.Format $cst_format }}
-      / 
-        {{ $utc := $next_show.In (time "2020-01-01T00:00:00.000" "UTC").Location }}
-        {{ $utc_format := cond (eq $utc.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
-        {{ $utc.Format $utc_format }}
-      / 
-        {{ $cet := $next_show.In (time "2020-01-01T00:00:00.000" "Europe/Rome").Location }}
-        {{ $cet_format := cond (eq $cet.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
-        {{ $cet.Format $cet_format }}
-      / 
-        {{ $ist := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Kolkata").Location }}
-        {{ $ist_format := cond (eq $ist.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
-        {{ $ist.Format $ist_format }}
-      / 
-        {{ $jst := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Tokyo").Location }}
-        {{ $jst_format := cond (eq $jst.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
-        {{ $jst.Format $jst_format }}
-    </div>
-    <div id="dates-small">
-      <ul>
-        <li class="date">{{ $cst.Format $cst_format }}</li>
-        <li class="date">{{ $utc.Format $utc_format }}</li>
-        <li class="date">{{ $cet.Format $utc_format }}</li>
-        <li class="date">{{ $ist.Format $ist_format }}</li>
-        {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Singapore").Location }}
-        {{ $sgt_format := cond (eq $sgt.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
-        <li class="date">{{ $sgt.Format $sgt_format }}</li>
-        <li class="date">{{ $jst.Format $jst_format }}</li>
-      </ul>
-    </div>
-    <div id="countdown" style="margin-top: 10px"></div>
-    <script>
-      function updateCountdown() {
-        var timeLeftFromNow = timeLeft({{$utc.Format "2006-01-02T15:04:05-0700"}});
-        var countdownDiv = document.getElementById("countdown");
-
-        if (timeLeftFromNow === false) {
-          countdownDiv.textContent = "NEXT SHOWTIME WILL BE ANNOUNCED SOON!"
-          countdownDiv.classList.remove("blink");
-          return;
-        }
-
-        if (timeLeftFromNow === true) {
-          countdownDiv.textContent = "LIVE NOW!"
-          countdownDiv.classList.add("blink");
-        } else {
-          const s = timeLeftFromNow.days === 1 ? "" : "S";
-          countdownDiv.textContent =
-              timeLeftFromNow.days + " DAY"+s+" "
-            + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
-            + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
-            + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
-        } 
-
-        setTimeout(runUpdateTimeout, 1000);
-      }
-
-      function runUpdateTimeout() {
-        // Be a good webdev and don't burn people's laptop batteries.
-        window.requestAnimationFrame(updateCountdown);
-      }
-
-      updateCountdown();
-    </script>
+    <div style="margin-top: 18px"></div>
+    {{ partial "time.html" $episode }}
   </div>
+  <a class="cf button" href="/episodes">PAST EPISODES</a>
   <div style="margin-top: 35px"></div>
-   The live stream has moved to YouTube!
+   The live stream is back on Twitch!
   <div style="margin-top: 20px"></div>
-  <a id="youtube" class="button" target="_blank" href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">YOUTUBE</a>
+  <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
   <div id="video-buttons">
-  <a class="button" href="/discord" style="background-color: #7baaf7; text-align: center;">
+  <a class="button" href="https://discord.com/invite/B73sGxF" target="_blank" style="background-color: #7baaf7; text-align: center;">
     DISCORD
     </a>
-    <a class="button" style="background-color: #7baaf7;padding:0" target="_blank" href="https://twitter.com/zigshowtime">
+    <a class="button" style="background-color: #7baaf7;padding:0" target="_blank" href="https://twitter.com/croloris">
       <img src="twitter.svg" style="width:59px;">
     </a>
   </div>
 
   <a class="button" href="/newsletter">NEWSLETTER</a>
   <div style="margin-top: 25px"></div>
-  <a class="cf button" target="_blank" href="/speak">APPLY TO SPEAK</a>
-  <a class="cf button" target="_blank" href="/advent-of-code">AOC21</a>
+  <a class="cf button" href="/speak">APPLY TO SPEAK</a>
   <div style="margin-top: 50px"></div>
 {{ end }}

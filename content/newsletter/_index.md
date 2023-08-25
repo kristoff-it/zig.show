@@ -1,6 +1,6 @@
 ---
 title: ""
-layout: single
+layout: newsletter
 draft: false
 ---
 <style type="text/css">

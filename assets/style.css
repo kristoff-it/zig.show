@@ -15,6 +15,9 @@
  }
 
 
+a {
+  color: inherit;
+}
 
  #zig {
    width: 70vw;
@@ -26,11 +29,32 @@
            drop-shadow(-1px 1px 2px #131315)
            drop-shadow(1px 1px 2px #131315);
  }
+ #zig-small {
+   width: 35vw;
+   height: auto;
+   max-width: 170px;
+   transform: translateY(-10px);
+   filter: drop-shadow(-1px -1px 2px #131315)
+           drop-shadow(1px -1px 2px #131315)
+           drop-shadow(-1px 1px 2px #131315)
+           drop-shadow(1px 1px 2px #131315);
+ }
 
  #showtime{
    font-size: min(3em, 10vw);
    margin: 0;
    transform: translateY(-8px);
+   filter: drop-shadow(-1px -1px 2px #131315);
+   text-shadow:
+     -3px -3px 6px #131315,
+     3px -3px 6px #131315,
+     -1px 3px 6px #131315,
+     3px 3px 6px #131315;
+ }
+ #showtime-small{
+   font-size: min(1.5em, 5vw);
+   margin: 0;
+   transform: translateY(-4px);
    filter: drop-shadow(-1px -1px 2px #131315);
    text-shadow:
      -3px -3px 6px #131315,
@@ -81,7 +105,7 @@
    text-align: center;
  }
 
- #show-title {
+ #show-title, .show-title {
    text-align: center;
    line-height: 2rem;
    max-width: 70vw;
@@ -93,12 +117,21 @@
   color:  white;
  }
  
- #show-guest {
+ #show-subtitle, .show-subtitle {
   color:  white;
-  
+   text-align: center;
+   line-height: 2rem;
+   max-width: 80vw;
+   font-size:  1rem;
+   text-transform: uppercase;
  }
 
- #next {
+ #show-guest, .show-guest {
+  color:  white;
+}
+
+
+ #next, .next {
    text-align: center;
    line-height: 2rem;
    max-width: 70vw;

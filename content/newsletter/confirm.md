@@ -1,5 +1,6 @@
 ---
 title: ""
+layout: newsletter
 draft: false
 ---
 <div id="next">
