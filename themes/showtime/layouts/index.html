@@ -15,10 +15,10 @@
       </h1>
   </div>
   <div style="margin-top: 18px"></div>
-  <div id="next">
+  <div id="next" style="display:flex; flex-direction:column; align-items:center;" >
     <div id="next-episode">
     {{ if gt $episode.Date time.Now }}NEXT{{else}}LAST{{end}} EPISODE</div>
-  <div style="margin-top: 5px"></div>
+  <div style="margin-top: 5px;"></div>
     <div id="show-title"><a href="{{$episode.RelPermalink}}">{{$params.title}}</a></div>
     {{ if $params.subtitle }}
       <div id="show-subtitle">{{$params.subtitle}}</div>
@@ -41,7 +41,9 @@
   </div>
   <a class="cf button" href="/episodes">PAST EPISODES</a>
   <div style="margin-top: 35px"></div>
-   The live stream is back on Twitch!
+   <span style="text-align:center; padding: 0 5px;">
+     The live stream is back on Twitch!
+   </span>
   <div style="margin-top: 20px"></div>
   <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
   <div id="video-buttons">

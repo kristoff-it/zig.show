@@ -1,5 +1,6 @@
 {{ if gt .Date time.Now }}
-  {{ $next_show := (time .Params.next_show .Params.where) }}
+  {{ $base_date := .Params.date.Format "2006-01-02T15:04:05"}}
+  {{ $next_show := (time $base_date .Params.where) }}
   {{ $cst := $next_show.In (time "2020-01-01T00:00:00.000" "America/Chicago").Location }}
 
   {{ $suffix := "th" }}
@@ -47,7 +48,8 @@
 <div id="countdown" style="margin-top: 10px"></div>
 <script>
   function updateCountdown() {
-    {{ $next_show := (time .Params.date .Params.where) }}
+    {{ $base_date := .Params.date.Format "2006-01-02T15:04:05"}}
+    {{ $next_show := (time $base_date .Params.where) }}
     {{ $utc := $next_show.In (time "2020-01-01T00:00:00.000" "UTC").Location }}
     var timeLeftFromNow = timeLeft({{$utc.Format "2006-01-02T15:04:05-0700"}});
     var countdownDiv = document.getElementById("countdown");
