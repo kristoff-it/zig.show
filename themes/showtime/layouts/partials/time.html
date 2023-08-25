@@ -1,45 +1,45 @@
 {{ if gt .Date time.Now }}
   {{ $base_date := .Params.date.Format "2006-01-02T15:04:05"}}
   {{ $next_show := (time $base_date .Params.where) }}
-  {{ $cst := $next_show.In (time "2020-01-01T00:00:00.000" "America/Chicago").Location }}
+  {{ $pst := $next_show.In (time "2020-01-01T00:00:00.000" "America/Los_Angeles").Location }}
 
   {{ $suffix := "th" }}
-  {{ if in (slice "1" "21" "31") ($cst.Format "2") }}
+  {{ if in (slice "1" "21" "31") ($pst.Format "2") }}
     {{ $suffix = "st" }}
-  {{ else if in (slice "2" "22") ($cst.Format "2") }}
+  {{ else if in (slice "2" "22") ($pst.Format "2") }}
     {{ $suffix = "nd" }}
-  {{ else if in (slice "3" "23") ($cst.Format "2") }}
+  {{ else if in (slice "3" "23") ($pst.Format "2") }}
     {{ $suffix = "rd" }}
   {{ end }}
-  <div>{{$cst.Format (printf "Monday 2%s of January" $suffix)}}</div>
+  <div>{{$pst.Format (printf "Monday 2%s of January" $suffix)}}</div>
   <div id="dates-big">
-      {{ $cst_format := cond (eq $cst.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
-      {{ $cst.Format $cst_format }}
+      {{ $pst_format := cond (eq $pst.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
+      {{ $pst.Format $pst_format }}
     / 
       {{ $utc := $next_show.In (time "2020-01-01T00:00:00.000" "UTC").Location }}
-      {{ $utc_format := cond (eq $utc.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
+      {{ $utc_format := cond (eq $utc.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
       {{ $utc.Format $utc_format }}
     / 
       {{ $cet := $next_show.In (time "2020-01-01T00:00:00.000" "Europe/Rome").Location }}
-      {{ $cet_format := cond (eq $cet.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
+      {{ $cet_format := cond (eq $cet.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
       {{ $cet.Format $cet_format }}
     / 
       {{ $ist := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Kolkata").Location }}
-      {{ $ist_format := cond (eq $ist.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
+      {{ $ist_format := cond (eq $ist.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
       {{ $ist.Format $ist_format }}
     / 
       {{ $jst := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Tokyo").Location }}
-      {{ $jst_format := cond (eq $jst.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
+      {{ $jst_format := cond (eq $jst.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
       {{ $jst.Format $jst_format }}
   </div>
   <div id="dates-small">
     <ul>
-      <li class="date">{{ $cst.Format $cst_format }}</li>
+      <li class="date">{{ $pst.Format $pst_format }}</li>
       <li class="date">{{ $utc.Format $utc_format }}</li>
       <li class="date">{{ $cet.Format $cet_format }}</li>
       <li class="date">{{ $ist.Format $ist_format }}</li>
       {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Singapore").Location }}
-      {{ $sgt_format := cond (eq $sgt.Day $cst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
+      {{ $sgt_format := cond (eq $sgt.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
       <li class="date">{{ $sgt.Format $sgt_format }}</li>
       <li class="date">{{ $jst.Format $jst_format }}</li>
     </ul>
