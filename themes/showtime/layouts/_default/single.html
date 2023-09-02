@@ -15,14 +15,17 @@
 {{ define "main" }}
   <div style="margin-top: 50px"></div>
   {{ if ne .Params.hide_logo true }}
+  <a href='/' style="text-decoration: none;">
   <div id="logo">
     <img id="zig-small" src="/zig.svg" width=77 height=70>
       <h1 id="showtime-small">
         SHOWTIME
       </h1>
   </div>
+  </a>
   {{ end }}
   <div style="margin-top: 30px"></div>
+  <div id="next">
   <div style="color:white; font-size:0.7rem; margin-bottom:10px;text-align:center;">
       EPISODE #{{.File.BaseFileName}}
   </div>
@@ -31,35 +34,24 @@
     {{ if .Params.subtitle }}
       <div id="show-subtitle">{{.Params.subtitle}}</div>
     {{ end }}
-        <div>
-          <span id="show-type">
-            {{if eq .Params.type "talk"}}
-            by
-            {{end}}
-            {{if eq .Params.type "interview"}}
-            with
-            {{end}}
-          </span>
-          <span id="show-guest">
+        <div id="show-guest">
           {{.Params.author}}
-          </span>
         </div>
 <div style="margin-top: 20px"></div>
-  {{ if .Content }}
-  <div style="color:white; font-size:0.7rem; margin-bottom:0;">ABSTRACT</div>
-  <div style="max-width: 70vw; text-align: center; margin-top:0; padding-top:0;">{{ .Content }}</div>
-  {{ end }}
-<div style="margin-top: 30px"></div>
   <div style="display:flex; flex-direction:column; align-items:center;">
     {{ if gt .Date time.Now }}
-      <div style="color:white; font-size:0.7rem; margin-bottom:10px; text-align:center;">    
-        <i style="margin: 0 25px;">EPISODE SCHEDULED, CATCH IT LIVE ON TWITCH!</i>
+      <div style="color:white; font-size:0.7rem; margin-bottom:10px; text-align:center; line-height: 1rem;">    
+        <i>EPISODE SCHEDULED, CATCH IT LIVE ON TWITCH!</i>
       </div>
-      <div style="max-width:70vw; text-align:center;">
+      <div class="next">
         {{ partial "time.html" . }}
       </div>
 
 <div style="margin-top: 20px"></div>
+  {{ if .Params.newsletter }}
+    <a class="cf button" style="font-size: 1rem; line-height: 1rem;"  target="_blank" href="{{.Params.newsletter}}">NEWSLETTER ANNOUNCEMENT</a>
+    <div style="margin-top: 20px"></div>
+  {{ end }}
   <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
 
 <div style="margin-top: 20px"></div>
@@ -74,6 +66,7 @@
         Video not yet published.
       {{ end }}
     {{end}}
+  </div>
   </div>
 
 <div style="margin-top: 50px"></div>

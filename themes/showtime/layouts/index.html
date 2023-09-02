@@ -15,27 +15,18 @@
       </h1>
   </div>
   <div style="margin-top: 18px"></div>
-  <div id="next" style="display:flex; flex-direction:column; align-items:center;" >
+  <div id="next">
     <div id="next-episode">
     {{ if gt $episode.Date time.Now }}NEXT{{else}}LAST{{end}} EPISODE</div>
   <div style="margin-top: 5px;"></div>
-    <div id="show-title"><a href="{{$episode.RelPermalink}}">{{$params.title}}</a></div>
+    <div id="show-title">{{$params.title}}</div>
     {{ if $params.subtitle }}
-      <div id="show-subtitle" style="margin-top: 10px;">{{$params.subtitle}}</div>
+      <div id="show-subtitle">{{$params.subtitle}}</div>
     {{ end }}
-    <div>
-      <span id="show-type">
-        {{if eq $params.type "talk"}}
-        by
-        {{end}}
-        {{if eq $params.type "interview"}}
-        with
-        {{end}}
-      </span>
-      <span id="show-guest">
+    <div id="show-guest">
       {{$params.author}}
-      </span>
     </div>
+    <a class="cf button" style="font-size: 1rem; padding: 5px; 10px;" href="{{$episode.RelPermalink}}">Read More</a>
     <div style="margin-top: 18px"></div>
     {{ partial "time.html" $episode }}
   </div>

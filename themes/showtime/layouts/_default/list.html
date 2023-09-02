@@ -1,53 +1,48 @@
 {{ define "main" }}
   <div style="margin-top: 50px"></div>
   {{ if ne .Params.hide_logo true }}
+  <a href='/' style="text-decoration: none;">
   <div id="logo">
     <img id="zig-small" src="/zig.svg" width=77 height=70>
       <h1 id="showtime-small">
         SHOWTIME
       </h1>
   </div>
+  </a>
   {{ end }}
-  <h1>Episode Archive</h1>
-  <div> 
-    
-  </div>
+  <h1 style="text-align: center;">Episode Archive</h1>
   {{ range $episode := .Pages.ByDate.Reverse }}
       {{ $params := $episode.Params}}
       <div style="margin-top: 50px"></div>
       <div class="next">
-      <div style="margin-top: 5px"></div>
-  <div style="color:white; font-size:0.7rem; margin-bottom:0;text-align:center;">
-      EPISODE #{{$episode.File.BaseFileName}}
-  </div>
-        <div id="show-title"><a href="{{$episode.RelPermalink}}">{{$params.title}}</a></div>
-    {{ if $params.subtitle }}
-      <div id="show-subtitle">{{$params.subtitle}}</div>
-    {{ end }}
-        <div style="magin-top: 0; padding-top: 0;"> {{ $episode.Date | time.Format "January 2, 2006" }} </div>
-        <div>
-          <span id="show-type">
-            {{if eq $params.type "talk"}}
-            by
-            {{end}}
-            {{if eq $params.type "interview"}}
-            with
-            {{end}}
-          </span>
-          <span id="show-guest">
-          {{$params.author}}
-          </span>
+        <div style="margin-top: 5px"></div>
+        <div style="color:white; font-size:0.7rem; margin-bottom:0;text-align:center;">
+          EPISODE #{{$episode.File.BaseFileName}}
+        </div>
+        <div class="show-title">{{$params.title}}</div>
+        {{ if $params.subtitle }}
+          <div class="show-subtitle">{{$params.subtitle}}</div>
+        {{ end }}
+        <div class="show-guest">
+            {{$params.author}}
+        </div>
+        <a class="cf button" style="font-size: 1rem; padding: 5px; 10px;" href="{{$episode.RelPermalink}}">Read More</a>
+        <div style="color:white; font-size:0.7rem; margin:0;text-align:center;">
+          {{ $episode.Date | time.Format "January 2, 2006" }} 
         </div>
         <div>
           {{ if gt $episode.Date time.Now }}
-          <span><i>Episode scheduled,
-           <a href="https://twitch.tv/kristoff_it" target="_blank">catch it live</a>!</i></span>
+          <div style="color:white; font-size:0.7rem; margin-bottom:10px; text-align:center; line-height: 1rem;">    
+            <i>EPISODE SCHEDULED, CATCH IT LIVE ON TWITCH!</i>
+          </div>
+          <div style="margin-top: 20px"></div>
+            <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
           {{end}}
         </div>
       </div>
   {{ end }}
   <div style="margin-top: 30px"></div>
-  <hr style="width: 600px;"/>
+  <hr style="width: 80vw; max-width: 600px;"/>
   <div style="margin-top: 10px"></div>
   <h2>Season 1</h2>
   <div style="text-align:center;max-width:70vw;color:white;">
