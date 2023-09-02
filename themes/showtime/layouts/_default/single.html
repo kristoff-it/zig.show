@@ -26,10 +26,15 @@
   {{ end }}
   <div style="margin-top: 30px"></div>
   <div id="next">
-  <div style="color:white; font-size:0.7rem; margin-bottom:10px;text-align:center;">
+  <div style="color:white; font-size:0.7rem; margin: 0; text-align:center; line-height: 1rem;">
       EPISODE #{{.File.BaseFileName}}
   </div>
-  <div style="margin-bottom: 1rem;"> {{ .Date | time.Format "January 2, 2006" }} </div>
+  {{ if lt .Date time.Now }}
+    <div style="color:white; font-size:0.7rem; margin:0; text-align:center; line-height: 1rem;">
+      {{ .Date | time.Format "January 2, 2006" }} 
+    </div>
+    <div style="margin-top: 10px"></div>
+  {{ end }}
   <div id="show-title">{{.Title}}</div>
     {{ if .Params.subtitle }}
       <div id="show-subtitle">{{.Params.subtitle}}</div>
@@ -40,8 +45,8 @@
 <div style="margin-top: 20px"></div>
   <div style="display:flex; flex-direction:column; align-items:center;">
     {{ if gt .Date time.Now }}
-      <div style="color:white; font-size:0.7rem; margin-bottom:10px; text-align:center; line-height: 1rem;">    
-        <i>EPISODE SCHEDULED, CATCH IT LIVE ON TWITCH!</i>
+      <div style="color:white; font-size:0.7rem; margin-bottom:20px; text-align:center; line-height: 1rem;">    
+        <i>EPISODE SCHEDULED<br>CATCH IT LIVE ON TWITCH!</i>
       </div>
       <div class="next">
         {{ partial "time.html" . }}
@@ -69,5 +74,6 @@
   </div>
   </div>
 
+<a class="cf button" href="/episodes"><- PAST EPISODES</a>
 <div style="margin-top: 50px"></div>
 {{ end }}

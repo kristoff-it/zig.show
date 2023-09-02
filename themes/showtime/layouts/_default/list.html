@@ -16,10 +16,13 @@
       <div style="margin-top: 50px"></div>
       <div class="next">
         <div style="margin-top: 5px"></div>
-        <div style="color:white; font-size:0.7rem; margin-bottom:0;text-align:center;">
+        <div style="color:white; font-size:0.7rem; margin-bottom:0;text-align:center; line-height: 1rem;">
           EPISODE #{{$episode.File.BaseFileName}}
         </div>
-        <div class="show-title">{{$params.title}}</div>
+        <div style="color:white; font-size:0.7rem; margin:0; text-align:center; line-height: 1rem;">
+          {{ $episode.Date | time.Format "January 2, 2006" }} 
+        </div>
+        <div class="show-title" style="margin-top: 10px;">{{$params.title}}</div>
         {{ if $params.subtitle }}
           <div class="show-subtitle">{{$params.subtitle}}</div>
         {{ end }}
@@ -27,13 +30,10 @@
             {{$params.author}}
         </div>
         <a class="cf button" style="font-size: 1rem; padding: 5px 15px;" href="{{$episode.RelPermalink}}">Read More</a>
-        <div style="color:white; font-size:0.7rem; margin:0;text-align:center;">
-          {{ $episode.Date | time.Format "January 2, 2006" }} 
-        </div>
         <div>
           {{ if gt $episode.Date time.Now }}
-          <div style="color:white; font-size:0.7rem; margin-bottom:10px; text-align:center; line-height: 1rem;">    
-            <i>EPISODE SCHEDULED, CATCH IT LIVE ON TWITCH!</i>
+          <div style="color:white; font-size:0.7rem; margin-bottom:10px; margin-top: 10px; text-align:center; line-height: 1rem;">    
+            <i>EPISODE SCHEDULED<br>CATCH IT LIVE ON TWITCH!</i>
           </div>
           <div style="margin-top: 20px"></div>
             <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
