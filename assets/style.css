@@ -147,7 +147,7 @@ a {
  #next, .next {
    text-align: center;
    line-height: 2rem;
-   max-width: 70vw;
+   max-width: 85vw;
    display:flex;
    flex-direction:column; 
    align-items:center;" 
