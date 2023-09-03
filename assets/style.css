@@ -112,6 +112,7 @@ a {
    text-align: center;
  }
 
+
  #show-title, .show-title {
    text-align: center;
    line-height: 2rem;
@@ -218,8 +219,26 @@ a {
    color: #FFFF54;
  }
 
+ #show-notes {
+   border: 3px solid white; 
+   padding: 10px 15px;
+ }
+
+ #show-notes a {
+   color: white; 
+ }
+
+ #show-notes ul {
+   list-style: none;
+   padding: 0; 
+ }
+
  @media only screen 
    and (max-device-width: 812px) {
+
+     #show-notes {
+      font-size: 1rem;
+     }
 
      #next {
        max-width: 85vw;

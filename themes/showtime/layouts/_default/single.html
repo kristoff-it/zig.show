@@ -53,6 +53,17 @@
       </div>
 
 <div style="margin-top: 20px"></div>
+  {{ if .Content }}
+    <div id="show-notes">
+          <div style="color:white; font-size:2rem; margin-top: 20px; text-align:center;">
+        Show Notes
+      </div>
+
+      {{.Content}}
+
+    </div>
+  {{ end }}
+<div style="margin-top: 20px"></div>
   {{ if .Params.newsletter }}
     <a class="cf button" style="font-size: 1rem; line-height: 1rem;"  target="_blank" href="{{.Params.newsletter}}">NEWSLETTER ANNOUNCEMENT</a>
     <div style="margin-top: 20px"></div>
