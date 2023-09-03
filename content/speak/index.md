@@ -16,6 +16,10 @@ draft: false
 	  max-width: min(90vw, 500px);
 	}
 
+  #question-container p {
+    text-transform: none;
+  }
+
 	details {
 	    font-family: sans-serif;
 	    font-size: 1.5rem;
