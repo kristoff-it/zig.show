@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Social Media"
 layout: socials
 draft: false
 ---
