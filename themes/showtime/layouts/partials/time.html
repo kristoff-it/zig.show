@@ -1,3 +1,14 @@
+
+{{ if .Params.postponed }}
+  <div id="notice">
+        <div style="color:#f7a41d; font-size:2rem; margin-top: 20px; text-align:center;">
+      SHOW POSTPONED
+    </div>
+    
+    <p>{{.Params.postponed}}</p>
+
+  </div>
+{{ else }}
 {{ if gt .Date time.Now }}
   {{ $base_date := .Params.date.Format "2006-01-02T15:04:05"}}
   {{ $next_show := (time $base_date .Params.where) }}
@@ -82,3 +93,4 @@
 
   updateCountdown();
 </script>
+{{ end }}

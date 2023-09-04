@@ -219,16 +219,22 @@ a {
    color: #FFFF54;
  }
 
- #show-notes {
+ #show-notes, #notice {
    border: 3px solid white; 
    padding: 10px 15px;
+   width: 85vw;
+   max-width: 700px;
  }
 
- #show-notes a {
+ #notice {
+  border-color: darkred;
+}
+
+ #show-notes a, #notice a {
    color: white; 
  }
 
- #show-notes ul {
+ #show-notes ul, #notice a {
    list-style: none;
    padding: 0; 
  }
@@ -236,7 +242,7 @@ a {
  @media only screen 
    and (max-device-width: 812px) {
 
-     #show-notes {
+     #show-notes, #notice {
       font-size: 1rem;
      }
 
