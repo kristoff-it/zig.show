@@ -38,10 +38,6 @@
       {{ $ist := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Kolkata").Location }}
       {{ $ist_format := cond (eq $ist.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
       {{ $ist.Format $ist_format }}
-    / 
-      {{ $jst := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Tokyo").Location }}
-      {{ $jst_format := cond (eq $jst.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
-      {{ $jst.Format $jst_format }}
   </div>
   <div id="dates-small">
     <ul>
@@ -52,7 +48,6 @@
       {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Singapore").Location }}
       {{ $sgt_format := cond (eq $sgt.Day $pst.Day) "3:04pm SGT" "3:04pm SGT (Mon)" }}
       <li class="date">{{ $sgt.Format $sgt_format }}</li>
-      <li class="date">{{ $jst.Format $jst_format }}</li>
     </ul>
   </div>
 {{ end }}
