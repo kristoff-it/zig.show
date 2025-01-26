@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zig SHOWTIME</title>
+    <link>http://localhost:1313/newsletter/</link>
+    <description>Recent content on Zig SHOWTIME</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/newsletter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/newsletter/confirm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/newsletter/confirm/</guid>
+      <description>&lt;div id=&#34;next&#34;&gt;&#xA;  &lt;div id=&#34;next-episode&#34;&gt;ONE LAST STEP&lt;/div&gt;&#xA;  &lt;div&gt;Please confirm your email address!&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div style=&#34;margin-top: 30px; max-width:500px; text-align:center;&#34;&gt;&#xA;  &lt;div style=&#34;color:white;&#34;&gt;You should have received an email with the activation link.&lt;/div&gt;&#xA;  &lt;div style=&#34;margin-top: 10px&#34;&gt;&lt;/div&gt;&#xA;  &lt;div&gt;Quick, click it before somebody set us up the bomb!&lt;/div&gt;&#xA;  &lt;div style=&#34;margin-top: 30px&#34;&gt;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/newsletter/goodbye/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/newsletter/goodbye/</guid>
+      <description>&lt;div id=&#34;next&#34;&gt;&#xA;    &lt;div id=&#34;next-episode&#34;&gt;UNSUBSCRIBED&lt;/div&gt;&#xA;    &lt;div&gt;Yeah, emails are annoying.&lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div style=&#34;margin-top: 10px&#34;&gt;&lt;/div&gt;&#xA;  &lt;div style=&#34;margin-top: 10px; max-width:500px; text-align:center;&#34;&gt;&#xA;    &lt;div&gt;See you around!&lt;/div&gt;&#xA;    &lt;div style=&#34;margin-top: 30px&#34;&gt;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/newsletter/hello/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/newsletter/hello/</guid>
+      <description>&lt;div id=&#34;next&#34;&gt;&#xA;&#x9;&lt;div id=&#34;next-episode&#34;&gt;YOU ARE NOW SUBSCRIBED&lt;/div&gt;&#xA;&#x9;&lt;div&gt;For great justice!&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div style=&#34;margin-top: 10px&#34;&gt;&lt;/div&gt;&#xA;&lt;a id=&#34;youtube&#34; class=&#34;button&#34; target=&#34;_blank&#34; href=&#34;https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA&#34;&gt;YOUTUBE&lt;/a&gt;&#xA;&lt;div style=&#34;margin-top: 10px; max-width:500px; line-height:1.2rem; text-align:center;&#34;&gt;&#xA;&#x9;&lt;div&gt;The YouTube channel hosts more Zig content and also talks from &lt;a href=&#34;https://softwareyoucan.love&#34; target=&#34;_blank&#34;&gt;Software You Can Love&lt;/a&gt;&lt;/div&gt;&#xA;&#x9;&lt;div style=&#34;margin-top: 30px&#34;&gt;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

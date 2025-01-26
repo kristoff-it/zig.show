@@ -1,0 +1,1 @@
+function timeLeft(e="2020-06-07T15:00:00.000Z"){var n,s,o,i,t=(new Date(e)-new Date)/1e3;return!(t<-60*60*2)&&(t<0||(t=Math.max(t,0),n=Math.floor(t/86400),t-=n*86400,s=Math.floor(t/3600)%24,t-=s*3600,o=Math.floor(t/60)%60,t-=o*60,i=Math.round(t%60),{days:n,hours:s,minutes:o,seconds:i}))}

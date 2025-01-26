@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Zig SHOWTIME</title><link>https://zig.show/</link><description>Recent content in Home on Zig SHOWTIME</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 31 Jan 2025 15:00:00 +0000</lastBuildDate><atom:link href="https://zig.show/index.xml" rel="self" type="application/rss+xml"/><item><title>Microscope</title><link>https://zig.show/episodes/37/</link><pubDate>Fri, 31 Jan 2025 15:00:00 +0000</pubDate><guid>https://zig.show/episodes/37/</guid><description>&lt;p>It&amp;rsquo;s written with a greek mu letter (uscope) but my font doesn&amp;rsquo;t support it, sorry Jim!&lt;/p>
+&lt;p>Announcement blog post: &lt;a href="https://www.calabro.io/uscope">https://www.calabro.io/uscope&lt;/a>&lt;/p>
+&lt;p>Source code: &lt;a href="https://github.com/jcalabro/uscope">https://github.com/jcalabro/uscope&lt;/a>&lt;/p></description></item><item><title>Zig</title><link>https://zig.show/episodes/36/</link><pubDate>Fri, 26 Jan 2024 11:00:00 +0000</pubDate><guid>https://zig.show/episodes/36/</guid><description/></item><item><title>dt</title><link>https://zig.show/episodes/35/</link><pubDate>Thu, 26 Oct 2023 23:00:00 +0000</pubDate><guid>https://zig.show/episodes/35/</guid><description>&lt;p>dt is a utility and functional-concatenative programming language.&lt;br>
+It provides some new ways of scripting and gluing programs together in Unix-like systems like Mac OSX, Linux, and BSD.&lt;/p>
+&lt;p>&lt;a href="https://github.com/so-dang-cool/dt">https://github.com/so-dang-cool/dt&lt;/a>&lt;/p></description></item><item><title>Pixi</title><link>https://zig.show/episodes/34/</link><pubDate>Mon, 02 Oct 2023 09:00:00 +0000</pubDate><guid>https://zig.show/episodes/34/</guid><description>&lt;p>A nice GUI program, written in Zig, that helps you create art, what&amp;rsquo;s not to love?&lt;/p>
+&lt;p>&lt;a href="https://github.com/foxnne/pixi">https://github.com/foxnne/pixi&lt;/a>&lt;/p></description></item><item><title>Buzz</title><link>https://zig.show/episodes/33/</link><pubDate>Thu, 21 Sep 2023 21:30:00 +0000</pubDate><guid>https://zig.show/episodes/33/</guid><description>&lt;p>Buzz is a lightweight language written in Zig that
+compiles to bytecode and runs in a JITted VM.&lt;/p>
+&lt;p>You can learn more on the official website:&lt;/p>
+&lt;p>&lt;a href="https://buzz-lang.dev/">https://buzz-lang.dev/&lt;/a>&lt;/p></description></item><item><title>Ghostty</title><link>https://zig.show/episodes/32/</link><pubDate>Tue, 12 Sep 2023 11:00:00 +0000</pubDate><guid>https://zig.show/episodes/32/</guid><description>&lt;p>Mitchell probably doesn&amp;rsquo;t need any introduction, but when it comes specifically to the Zig community he also has has plenty of interesting content he&amp;rsquo;s published on his personal blog:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://mitchellh.com/zig/">Posts on Zig Internals&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>While Ghostty, the subject of his talk, is not openly available yet, he also wrote a few devlogs about it:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://mitchellh.com/ghostty/">Ghostty Devlogs&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title/><link>https://zig.show/newsletter/confirm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zig.show/newsletter/confirm/</guid><description>&lt;div id="next">
+ &lt;div id="next-episode">ONE LAST STEP&lt;/div>
+ &lt;div>Please confirm your email address!&lt;/div>
+&lt;/div>
+&lt;div style="margin-top: 30px; max-width:500px; text-align:center;">
+ &lt;div style="color:white;">You should have received an email with the activation link.&lt;/div>
+ &lt;div style="margin-top: 10px">&lt;/div>
+ &lt;div>Quick, click it before somebody set us up the bomb!&lt;/div>
+ &lt;div style="margin-top: 30px">&lt;/div>
+&lt;/div></description></item><item><title/><link>https://zig.show/newsletter/goodbye/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zig.show/newsletter/goodbye/</guid><description>&lt;div id="next">
+ &lt;div id="next-episode">UNSUBSCRIBED&lt;/div>
+ &lt;div>Yeah, emails are annoying.&lt;/div>
+ &lt;/div>
+ &lt;div style="margin-top: 10px">&lt;/div>
+ &lt;div style="margin-top: 10px; max-width:500px; text-align:center;">
+ &lt;div>See you around!&lt;/div>
+ &lt;div style="margin-top: 30px">&lt;/div>
+&lt;/div></description></item><item><title/><link>https://zig.show/newsletter/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zig.show/newsletter/hello/</guid><description>&lt;div id="next">
+	&lt;div id="next-episode">YOU ARE NOW SUBSCRIBED&lt;/div>
+	&lt;div>For great justice!&lt;/div>
+&lt;/div>
+&lt;div style="margin-top: 10px">&lt;/div>
+&lt;a id="youtube" class="button" target="_blank" href="https://www.youtube.com/channel/UC2EQzAewrC10KCDFSS4j-zA">YOUTUBE&lt;/a>
+&lt;div style="margin-top: 10px; max-width:500px; line-height:1.2rem; text-align:center;">
+	&lt;div>The YouTube channel hosts more Zig content and also talks from &lt;a href="https://softwareyoucan.love" target="_blank">Software You Can Love&lt;/a>&lt;/div>
+	&lt;div style="margin-top: 30px">&lt;/div>
+&lt;/div></description></item><item><title/><link>https://zig.show/speak/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zig.show/speak/</guid><description>&lt;style type="text/css">
+	#logo {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ transform: scale(0.5);
+ }
+	#question-container {
+	 min-width: 60vw;
+	 max-width: min(90vw, 500px);
+	}
+
+ #question-container p {
+ text-transform: none;
+ }
+
+	details {
+	 font-family: sans-serif;
+	 font-size: 1.5rem;
+	 border-radius: 4px;
+	 padding: .5em .5em 0;
+	 margin-bottom: 2rem;
+	}
+
+	summary {
+	 cursor: pointer;
+	 font-family: 'Press Start 2P', cursive;
+	 line-height: 1.4rem;
+	 font-weight: bold;
+	 margin: -.5em -.5em 0;
+	 padding: .5em;
+	 border: 1px solid #aaa;
+	 font-size: 1.2rem;
+	 letter-spacing: 1px;
+	 /* Works on Chrome, but not Firefox.
+	 SHAMEFUL DISPLAY. 
+	 display: flex;
+	 flex-direction: row-reverse;
+	 justify-content: space-between;
+	 align-items: center;
+	 */
+	}
+
+	details[open] {
+	 padding: .5em;
+	 color: white;
+	}
+
+	details[open] summary {
+	 border-bottom: 1px solid #aaa;
+	 margin-bottom: .5em;
+	}
+
+	details > summary::-webkit-details-marker {
+	 display: none;
+	}
+
+	details a {
+	 color: #FFFF54;
+	}
+&lt;/style>
+&lt;div id="question-container">
+ &lt;details>
+ &lt;summary>What is Zig SHOWTIME?&lt;/summary>
+ &lt;p>
+ Zig SHOWTIME is a live-streamed show that airs on Twitch where (mostly) 
+ members of the Zig community present on a topic and take questions from
+ the viewers. 
+ &lt;/p></description></item><item><title>Social Media</title><link>https://zig.show/socials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zig.show/socials/</guid><description>&lt;style type="text/css">
+
+ .flex {
+ display: flex; 
+ flex-direction: column; 
+ align-items: center;
+ }
+
+.button {
+ background-color: #FFFF54;
+ text-decoration: none;
+ color: #131315;
+ padding: 10px;
+ font-size: 1.2rem;
+ margin: 5px;
+}
+
+a.button:hover {
+ background-color: white;
+}
+
+&lt;/style>
+&lt;div id="next">
+&lt;div id="next-episode">SUBSCRIBE TO THE NEWSLETTER&lt;/div>
+&lt;div>Get notified when a new episode airs!&lt;/div>
+&lt;/div>
+&lt;div style="margin-top: 10px">&lt;/div>
+&lt;div class="flex">
+&lt;form
+ action="https://buttondown.email/api/emails/embed-subscribe/ZigSHOWTIME"
+ method="post"
+ class="embeddable-buttondown-form flex"
+ style="flex-direction:row; flex-wrap:wrap; justify-content:center;"
+>
+ &lt;input type="hidden" value="1" name="embed">&lt;/input>
+ &lt;input type="email" name="email" id="bd-email" placeholder="your@email.com" style="padding-left: 5px">&lt;/input>&lt;input type="submit" value="SLAP">&lt;/input>
+&lt;/form>
+&lt;div style="margin-top: 15px">&lt;/div>
+&lt;div style="font-size: 0.6em">&lt;a id="rss" href="https://buttondown.email/ZigSHOWTIME/rss" target="_blank">RSS is also available&lt;/a>&lt;span style="color:white;">!&lt;/span>&lt;/div>
+&lt;div style="margin-top: 10px">&lt;/div>
+&lt;a id="archive" class="button" target="_blank" href="https://buttondown.email/ZigSHOWTIME/archive">READ PAST ISSUES&lt;/a>
+&lt;div style="margin-top: 30px">&lt;/div>
+&lt;div style="text-align: center; max-width: 500px; line-height: 1.2rem;">Might include other lightly editorialized content and traces of nuts.&lt;/div>
+&lt;div style="margin-top: 30px">&lt;/div>
+&lt;div style="font-size: 0.6em; text-align: center; line-height: 1.2rem; margin-left: 60px; margin-right: 60px;">
+ &lt;a id="rss" href="https://www.youtube.com/watch?v=GM_siEPD4Ws&amp;t=885s" target="_blank">
+ Why does the button say SLAP instead of SUBMIT&lt;/a>&lt;span style="color:white;">?&lt;/span>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

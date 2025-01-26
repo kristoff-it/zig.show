@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+   <title>
+	
+		Microscope
+	
+ - Zig SHOWTIME</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/png" href="zig-favicon.png">
+   
+   <link rel="stylesheet" type="text/css" href="http://localhost:1313/style.min.24e3f6f9d547da6c571fa822da609c5574859e2653cf16a6fcc44b40a450de21.css">
+   <link rel="alternate" type="application/atom+xml" 
+      title="Zig SHOWTIME Newsletter" 
+      href="https://buttondown.email/ZigSHOWTIME/rss" />
+   
+   
+   <script src="http://localhost:1313/timeleft.min.9395ef336546e3c79210bbce34a5e4f995dfca80860ab4d60db8d8a971e079a2.js"></script>
+
+</head>
+    <body>
+
+  <div style="margin-top: 50px"></div>
+  
+  <a href='/' style="text-decoration: none;">
+  <div id="logo">
+    <img id="zig-small" src="/zig.svg" width=77 height=70>
+      <h1 id="showtime-small">
+        SHOWTIME
+      </h1>
+  </div>
+  </a>
+  
+  <div style="margin-top: 30px"></div>
+  <div id="next" style="width:85vw; max-width: 700px;">
+  <div style="color:white; font-size:0.7rem; margin: 0; text-align:center; line-height: 1rem;">
+      EPISODE #37
+  </div>
+  
+  <div id="show-title">Microscope</div>
+    
+      <div id="show-subtitle">A new debugger written in Zig from scratch!</div>
+    
+        <div id="show-guest">
+          Jim Calabro
+        </div>
+<div style="margin-top: 20px"></div>
+  <div style="display:flex; flex-direction:column; align-items:center;">
+    
+      <div style="color:white; font-size:0.7rem; margin-bottom:20px; text-align:center; line-height: 1rem;">    
+        <i>EPISODE SCHEDULED<br>CATCH IT LIVE ON TWITCH!</i>
+      </div>
+      <div class="next">
+        
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  <div>Friday 31st of January</div>
+  <div id="dates-big">
+      
+      12:00pm PST
+    / 
+      
+      
+      8:00pm UTC
+    / 
+      
+      
+      9:00pm CET
+    / 
+      
+      
+      1:30am IST (Sat)
+  </div>
+  <div id="dates-small">
+    <ul>
+      <li class="date">12:00pm PST</li>
+      <li class="date">8:00pm UTC</li>
+      <li class="date">9:00pm CET</li>
+      <li class="date">1:30am IST (Sat)</li>
+      
+      
+      <li class="date">4:00am SGT (Sat)</li>
+    </ul>
+  </div>
+
+<div id="countdown" style="margin-top: 10px"></div>
+<script>
+  function updateCountdown() {
+    
+    
+    
+    var timeLeftFromNow = timeLeft("2025-01-31T20:00:00+0000");
+    var countdownDiv = document.getElementById("countdown");
+
+    if (timeLeftFromNow === false) {
+      countdownDiv.textContent = "NEXT SHOWTIME WILL BE ANNOUNCED SOON!"
+      countdownDiv.classList.remove("blink");
+      return;
+    }
+
+    if (timeLeftFromNow === true) {
+      countdownDiv.textContent = "LIVE NOW!"
+      countdownDiv.classList.add("blink");
+    } else {
+      const s = timeLeftFromNow.days === 1 ? "" : "S";
+      countdownDiv.textContent =
+          timeLeftFromNow.days + " DAY"+s+" "
+        + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
+        + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
+        + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
+    } 
+
+    setTimeout(runUpdateTimeout, 1000);
+  }
+
+  function runUpdateTimeout() {
+    
+    window.requestAnimationFrame(updateCountdown);
+  }
+
+  updateCountdown();
+</script>
+
+
+      </div>
+
+<div style="margin-top: 20px"></div>
+  
+    <div id="show-notes">
+          <div style="color:white; font-size:2rem; margin-top: 20px; text-align:center; line-height: 2rem;">
+        Show Notes
+      </div>
+
+      <p>It&rsquo;s written with a greek mu letter (uscope) but my font doesn&rsquo;t support it, sorry Jim!</p>
+<p>Announcement blog post: <a href="https://www.calabro.io/uscope">https://www.calabro.io/uscope</a></p>
+<p>Source code: <a href="https://github.com/jcalabro/uscope">https://github.com/jcalabro/uscope</a></p>
+
+
+    </div>
+  
+<div style="margin-top: 20px"></div>
+  
+    <a class="cf button" style="font-size: 1rem; line-height: 1rem;"  target="_blank" href="https://buttondown.email/ZigSHOWTIME/archive/37/">NEWSLETTER ANNOUNCEMENT</a>
+    <div style="margin-top: 20px"></div>
+  
+  <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
+
+<div style="margin-top: 20px"></div>
+    
+  </div>
+  </div>
+
+<a class="cf button" style="white-space: nowrap;" href="/episodes">&lt;- PAST EPISODES</a>
+<div style="margin-top: 50px"></div>
+
+    </body>
+</html>
