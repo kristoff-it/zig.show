@@ -6,8 +6,15 @@
     <description>Recent content in Home on Zig SHOWTIME</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2025 15:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2025 19:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rewriting Roc</title>
+      <link>http://localhost:1313/episodes/38/</link>
+      <pubDate>Mon, 10 Feb 2025 19:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/episodes/38/</guid>
+      <description>&lt;p&gt;As the techyap-sphere &lt;a href=&#34;https://news.ycombinator.com/item?id=42935516&#34;&gt;has discovered&lt;/a&gt; a couple days ago, &lt;a href=&#34;https://roc-lang.org&#34;&gt;the Roc programming language&lt;/a&gt; has decided to rewrite the Roc compiler from Rust to Zig.&lt;/p&gt;&#xA;&lt;p&gt;Roc is no stranger to Zig as that&amp;rsquo;s the language in which Roc&amp;rsquo;s standard library was already implemented in, but until very recently it proudly sported a &amp;ldquo;double citizenship&amp;rdquo;: Rust in the sheets (the compiler), Zig in the streets (the stdlib).&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gist.github.com/rtfeldman/77fb430ee57b42f5f2ca973a3992532f&#34;&gt;Now things have changed&lt;/a&gt;, and this has immediately spawned a storm of discussions about the merits of one language versus the other. In this episode we&amp;rsquo;re not interested in the memory safety wars, but rather in the much more interesting aspect of how a project that started with Rust, and which over time attracted contributors who are proficient in Rust, ended up successfully building both the confidence and the consensus required to switch to Zig.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Microscope</title>
       <link>http://localhost:1313/episodes/37/</link>
