@@ -1,13 +1,11 @@
 
 {{ if .Params.postponed }}
-  <div id="notice">
-        <div style="color:#f7a41d; font-size:2rem; margin-top: 20px; text-align:center; line-height: 2rem;">
-      SHOW POSTPONED
-    </div>
-    
-    <p>{{.Params.postponed}}</p>
-
+<div id="notice">
+  <div style="color:#f7a41d; font-size:2rem; margin-top: 20px; text-align:center; line-height: 2rem;">
+    SHOW POSTPONED
   </div>
+  <p>{{.Params.postponed}}</p>
+</div>
 {{ else }}
 {{ if gt .Date time.Now }}
   {{ $base_date := .Params.date.Format "2006-01-02T15:04:05"}}
@@ -22,9 +20,9 @@
   {{ else if in (slice "3" "23") ($pst.Format "2") }}
     {{ $suffix = "rd" }}
   {{ end }}
-  <div>{{$pst.Format (printf "Monday 2%s of January" $suffix)}}</div>
-  <div id="dates-big">
-      {{ $pst_format := cond (eq $pst.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
+<div>{{$pst.Format (printf "Monday 2%s of January" $suffix)}}</div>
+<div id="dates-big">
+  {{ $pst_format := cond (eq $pst.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
       {{ $pst.Format $pst_format }}
     / 
       {{ $utc := $next_show.In (time "2020-01-01T00:00:00.000" "UTC").Location }}
@@ -32,24 +30,24 @@
       {{ $utc.Format $utc_format }}
     / 
       {{ $cet := $next_show.In (time "2020-01-01T00:00:00.000" "Europe/Rome").Location }}
-      {{ $cet_format := cond (eq $cet.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
+      {{ $cet_format := cond (eq $cet.Day $pst.Day) "15:04 MST" "3:04pm MST (Mon)" }}
       {{ $cet.Format $cet_format }}
     / 
       {{ $ist := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Kolkata").Location }}
       {{ $ist_format := cond (eq $ist.Day $pst.Day) "3:04pm MST" "3:04pm MST (Mon)" }}
       {{ $ist.Format $ist_format }}
-  </div>
-  <div id="dates-small">
-    <ul>
-      <li class="date">{{ $pst.Format $pst_format }}</li>
-      <li class="date">{{ $utc.Format $utc_format }}</li>
-      <li class="date">{{ $cet.Format $cet_format }}</li>
-      <li class="date">{{ $ist.Format $ist_format }}</li>
-      {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Singapore").Location }}
+</div>
+<div id="dates-small">
+  <ul>
+    <li class="date">{{ $pst.Format $pst_format }}</li>
+    <li class="date">{{ $utc.Format $utc_format }}</li>
+    <li class="date">{{ $cet.Format $cet_format }}</li>
+    <li class="date">{{ $ist.Format $ist_format }}</li>
+    {{ $sgt := $next_show.In (time "2020-01-01T00:00:00.000" "Asia/Singapore").Location }}
       {{ $sgt_format := cond (eq $sgt.Day $pst.Day) "3:04pm SGT" "3:04pm SGT (Mon)" }}
-      <li class="date">{{ $sgt.Format $sgt_format }}</li>
-    </ul>
-  </div>
+    <li class="date">{{ $sgt.Format $sgt_format }}</li>
+  </ul>
+</div>
 {{ end }}
 <div id="countdown" style="margin-top: 10px"></div>
 <script>
