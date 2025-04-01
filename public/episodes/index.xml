@@ -16,6 +16,13 @@
       <description>&lt;p&gt;&lt;a href=&#34;https://david-vanderson.github.io/&#34;&gt;Online demo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/david-vanderson/dvui&#34;&gt;Code&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Orca</title>
+      <link>http://localhost:1313/episodes/40/</link>
+      <pubDate>Tue, 25 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/episodes/40/</guid>
+      <description>&lt;p&gt;Orca is a WebAssembly runtime, but that alone won&amp;rsquo;t give you an idea of what the project is about. There are plenty of WASM runtimes out there and some just that (a way of running WASM) and some are a bit more, like &lt;a href=&#34;https://wasm4.org/&#34;&gt;WASM-4&lt;/a&gt; for example, which is a fantasy console.&lt;/p&gt;&#xA;&lt;p&gt;On the &lt;a href=&#34;https://orca-app.dev/&#34;&gt;official Orca website&lt;/a&gt; we can find this description:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Today, the web has become the de facto platform for safely distributing applications on a wide range of devices. Unfortunately, this comes at a huge complexity cost, as the base layers of the web were never designed for that purpose.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Rewriting Roc</title>
       <link>http://localhost:1313/episodes/38/</link>
       <pubDate>Mon, 10 Feb 2025 19:00:00 +0000</pubDate>

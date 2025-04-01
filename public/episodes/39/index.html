@@ -37,6 +37,11 @@
       EPISODE #39
   </div>
   
+    <div style="color:white; font-size:0.7rem; margin:0; text-align:center; line-height: 1rem;">
+      February 25, 2025 
+    </div>
+    <div style="margin-top: 10px"></div>
+  
   <div id="show-title">DVUI</div>
     
       <div id="show-subtitle">Immediate Mode GUI for Zig!</div>
@@ -47,110 +52,13 @@
 <div style="margin-top: 20px"></div>
   <div style="display:flex; flex-direction:column; align-items:center;">
     
-      <div style="color:white; font-size:0.7rem; margin-bottom:20px; text-align:center; line-height: 1rem;">    
-        <i>EPISODE SCHEDULED<br>CATCH IT LIVE ON TWITCH!</i>
+       
+      <div style="display:flex;flex-direction:column;align-items:center;">
+        <div style="color:white; font-size:0.7rem; margin-bottom:0;text-align:center;">VIDEO</div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/B9dwuBXmTW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div style="max-width: 70vw; text-align:center;">Leave a comment on YouTube to publicly thank the speaker and <a href="https://discord.com/invite/B73sGxF" target="_blank">join our Discord server</a> to continue the discussion!</div> 
       </div>
-      <div class="next">
-        
-
-
-  
-  
-  
-
-  
-  
-  <div>Tuesday 25th of February</div>
-  <div id="dates-big">
       
-      8:00am PST
-    / 
-      
-      
-      4:00pm UTC
-    / 
-      
-      
-      5:00pm CET
-    / 
-      
-      
-      9:30pm IST
-  </div>
-  <div id="dates-small">
-    <ul>
-      <li class="date">8:00am PST</li>
-      <li class="date">4:00pm UTC</li>
-      <li class="date">5:00pm CET</li>
-      <li class="date">9:30pm IST</li>
-      
-      
-      <li class="date">12:00am SGT (Wed)</li>
-    </ul>
-  </div>
-
-<div id="countdown" style="margin-top: 10px"></div>
-<script>
-  function updateCountdown() {
-    
-    
-    
-    var timeLeftFromNow = timeLeft("2025-02-25T16:00:00+0000");
-    var countdownDiv = document.getElementById("countdown");
-
-    if (timeLeftFromNow === false) {
-      countdownDiv.textContent = "NEXT SHOWTIME WILL BE ANNOUNCED SOON!"
-      countdownDiv.classList.remove("blink");
-      return;
-    }
-
-    if (timeLeftFromNow === true) {
-      countdownDiv.textContent = "LIVE NOW!"
-      countdownDiv.classList.add("blink");
-    } else {
-      const s = timeLeftFromNow.days === 1 ? "" : "S";
-      countdownDiv.textContent =
-          timeLeftFromNow.days + " DAY"+s+" "
-        + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
-        + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
-        + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
-    } 
-
-    setTimeout(runUpdateTimeout, 1000);
-  }
-
-  function runUpdateTimeout() {
-    
-    window.requestAnimationFrame(updateCountdown);
-  }
-
-  updateCountdown();
-</script>
-
-
-      </div>
-
-<div style="margin-top: 20px"></div>
-  
-    <div id="show-notes">
-          <div style="color:white; font-size:2rem; margin-top: 20px; text-align:center; line-height: 2rem;">
-        Show Notes
-      </div>
-
-      <p><a href="https://david-vanderson.github.io/">Online demo</a></p>
-<p><a href="https://github.com/david-vanderson/dvui">Code</a></p>
-
-
-    </div>
-  
-<div style="margin-top: 20px"></div>
-  
-    <a class="cf button" style="font-size: 1rem; line-height: 1rem;"  target="_blank" href="https://buttondown.email/ZigSHOWTIME/archive/39/">NEWSLETTER ANNOUNCEMENT</a>
-    <div style="margin-top: 20px"></div>
-  
-  <a id="twitch" class="button" target="_blank" href="https://twitch.tv/kristoff_it">TWITCH</a>
-
-<div style="margin-top: 20px"></div>
     
   </div>
   </div>
