@@ -77,8 +77,8 @@ draft: false
     <details>
       <summary>I've never spoken publicly before.</summary>
       Don't worry, we accept first-time speakers and if you point out that you might
-      need help, we'll be happy to support you. As of now we've aired 3 episodes and
-      for a few of the speakers that was the first time they spoke publicly.
+      need help, we'll be happy to support you. As of now we've aired more than 30 episodes
+      and for a few of the speakers that was the first time they spoke publicly.
     </details>
     <details>
       <summary>What are the prerequisites for speaking?</summary>
