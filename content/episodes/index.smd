@@ -1,0 +1,13 @@
+---
+.title = "Past Episodes",
+.date = @date("1990-01-01T00:00:00"),
+.author = "Sample Author",
+.layout = "episodes.shtml",
+.alternatives = [{ 
+    .name = "rss",
+    .layout = "episodes.xml", 
+    .output = "index.xml",
+}],
+.draft = false,
+--- 
+

@@ -1,0 +1,9 @@
+---
+.title = "Unsubscribed",
+.date = @date("1990-01-01T00:00:00"),
+.author = "Sample Author",
+.layout = "page.shtml",
+.draft = false,
+--- 
+
+You will not receive emails from Zig SHOWTIME anymore.

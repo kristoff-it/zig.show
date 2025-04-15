@@ -1,0 +1,18 @@
+---
+.title= "dt",
+.description= "Duct Tape for\nUnix Pipes",
+.date= "2023-10-26T23:00:00.000",
+.author= "Justin Hill",
+.layout = "episode.shtml",
+.custom = {
+	"type": "talk",
+	"where": "America/Los_Angeles",
+	"newsletter": "https://buttondown.email/ZigSHOWTIME/archive/35/",
+	"vod": "ZTOOlwoX9A8",
+	"postponed": false,
+},
+---
+dt is a utility and functional-concatenative programming language.   
+It provides some new ways of scripting and gluing programs together in Unix-like systems like Mac OSX, Linux, and BSD.  
+
+https://github.com/so-dang-cool/dt

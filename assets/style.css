@@ -1,295 +1,167 @@
 @font-face {
-  font-family: 'Press Start 2P';
-  src: url('/PressStart2P-Regular.ttf') format('truetype');
-}
-
-@font-face {
   font-family: 'Joystix';
   src: url('/joystix.monospace-regular.otf') format('truetype');
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'Vermin Vibes 1989';
+  src: url('/vermin-vibes-1989.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: '1993';
+  src: url('/NineteenNinetyThree.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Press Start 2P', monospace;
+  font-family: '1993', monospace;
   color: #FFFF54;
-  background-color: #131315;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
-
-
-a {
-  color: inherit;
-}
-
-#zig {
-  width: 70vw;
-  height: auto;
-  max-width: 340px;
-  transform: translateY(-20px);
-  filter: drop-shadow(-1px -1px 2px #131315) drop-shadow(1px -1px 2px #131315) drop-shadow(-1px 1px 2px #131315) drop-shadow(1px 1px 2px #131315);
-}
-
-#zig-small {
-  width: 35vw;
-  height: auto;
-  max-width: 170px;
-  transform: translateY(-10px);
-  filter: drop-shadow(-1px -1px 2px #131315) drop-shadow(1px -1px 2px #131315) drop-shadow(-1px 1px 2px #131315) drop-shadow(1px 1px 2px #131315);
-}
-
-#showtime {
-  font-size: min(3em, 10vw);
-  margin: 0;
-  transform: translateY(-8px);
-  filter: drop-shadow(-1px -1px 2px #131315);
-  text-shadow:
-    -3px -3px 6px #131315,
-    3px -3px 6px #131315,
-    -1px 3px 6px #131315,
-    3px 3px 6px #131315;
-}
-
-#showtime-small {
-  font-size: min(1.5em, 5vw);
-  margin: 0;
-  transform: translateY(-4px);
-  filter: drop-shadow(-1px -1px 2px #131315);
-  text-shadow:
-    -3px -3px 6px #131315,
-    3px -3px 6px #131315,
-    -1px 3px 6px #131315,
-    3px 3px 6px #131315;
+  font-size: 1.5rem;
+  padding: 15px;
+  width: 800px;
 }
 
 #logo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-#top-text {
-  margin-bottom: 40px;
-  text-align: center;
-  line-height: 2rem;
-  font-size: 0.9rem;
-  max-width: 80vw;
+#logo h1 {
+  font-family: 'Vermin Vibes 1989', monospace;
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: 0;
+  color: #FFFF54;
 }
 
-#video-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+#logo-link {
+  text-decoration: none;
+}
+
+#title {
+  margin: 0;
+}
+
+#desc {
+  color: #eee;
+  text-align: center;
+  margin-top: 0;
+}
+
+#author {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#countdown {
+  color: #eee;
+  text-align: center;
 }
 
 .button {
-  background-color: #FFFF54;
+  font-family: 'Joystix', monospace;
+  background-color: #eee;
   text-decoration: none;
   color: #131315;
-  padding: 15px;
-  font-size: 1.8rem;
+  padding: 10px 15px;
+  font-size: 1.4rem;
   margin: 5px;
 }
 
 a.button:hover {
-  background-color: white !important;
+  background-color: #FFFF54 !important;
 }
 
-.cf {
-  background-color: #F7A41D;
-  font-size: 1.3rem;
-  margin-top: 20px;
-  text-align: center;
+h1,
+h2,
+h3 {
+  color: #fff;
+  font-family: "Joystix", sans-serif;
+  align-self: center;
+}
+
+b,
+strong {
+  color: #fff;
+}
+
+a {
+  color: #eee;
+}
+
+html {
+  color: #ccc;
+  font-family: "Georgia", serif;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #131315;
 }
 
 
-#show-title,
-.show-title {
-  text-align: center;
-  line-height: 2rem;
-  max-width: 70vw;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-#show-type {
-  color: white;
-}
-
-#show-subtitle,
-.show-subtitle {
-  color: white;
-  text-align: center;
-  max-width: 80vw;
-  font-size: 1.1rem;
-  line-height: 1.2rem;
-  text-transform: uppercase;
+.site-title {
+  font-size: 2.5em;
   margin-bottom: 10px;
-  margin-top: 10px;
+  /* text-align: center; */
 }
 
-#show-guest,
-.show-guest {
-  color: #131315;
-  background: white;
-  padding: 2px 10px;
-  border-radius: 4px;
-  font-size: 0.9rem;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-
-#next,
-.next {
+.block {
+  border: 1px dotted white;
+  padding: 5px 15px;
+  margin: 0 10px;
   text-align: center;
-  line-height: 2rem;
-  max-width: 85vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.block h1 {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.wave {
+  background: #111;
+  color: #fff;
+  text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+footer {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  " 
-
 }
 
-#next-episode {
-  color: white;
-  font-size: 1.2rem;
+footer hr {
+  width: 100%;
 }
 
-.extra {
-  color: white;
-  font-size: 1.2rem;
-}
-
-#countdown {
-  color: white;
-  font-size: 1.2rem;
-}
-
-.blink {
-  animation: 2s linear infinite condemned_blink_effect;
-}
-
-/* for Safari 4.0 - 8.0 */
-@-webkit-keyframes condemned_blink_effect {
-  0% {
-    visibility: hidden;
+@media only screen and (max-device-width: 767px) {
+  html {
+    font-size: 0.8rem;
   }
 
-  50% {
-    visibility: hidden;
+  nav {
+    flex-direction: column;
+    align-items: center;
   }
 
-  100% {
-    visibility: visible;
-  }
-}
-
-@keyframes condemned_blink_effect {
-  0% {
-    visibility: hidden;
-  }
-
-  50% {
-    visibility: hidden;
-  }
-
-  100% {
-    visibility: visible;
-  }
-}
-
-#dates-big {
-  font-size: 1rem;
-}
-
-#dates-small {
-  display: none;
-}
-
-#dates-small ul {
-  padding-left: 0;
-  list-style-type: none;
-}
-
-#dates-small ul li {
-  border-bottom: 3px solid #F7A41D;
-}
-
-.arrow {
-  color: #FFFF54;
-}
-
-#show-notes,
-#notice {
-  border: 3px solid white;
-  padding: 10px 15px;
-  width: 85vw;
-  max-width: 700px;
-}
-
-#notice {
-  border-color: darkred;
-}
-
-#show-notes a,
-#notice a {
-  color: white;
-}
-
-#show-notes ul,
-#notice a {
-  list-style: none;
-  padding: 0;
-}
-
-blockquote {
-  font-style: italic;
-}
-
-@media only screen and (max-device-width: 812px) {
-
-  #show-notes,
-  #notice {
-    font-size: 1rem;
-    line-height: 1.2rem;
-  }
-
-  #next {
-    max-width: 85vw;
-  }
-
-  #top-text {
-    font-size: 0.7rem;
-    line-height: 1rem;
-  }
-
-  #dates-small {
-    display: block;
-  }
-
-  #dates-big {
-    display: none;
-  }
-
-  .extra {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    text-align: center;
-    border-bottom: 3px solid #FFFF54;
-  }
-
-  .arrow {
-    display: none;
-  }
 }

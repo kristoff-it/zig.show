@@ -1,0 +1,9 @@
+---
+.title = "Newsletter",
+.date = @date("1990-01-01T00:00:00"),
+.author = "Sample Author",
+.layout = "newsletter.shtml",
+.draft = false,
+--- 
+
+Zig SHOWTIME has an [RSS feed]($link.page('episodes').alternative('rss')) and a newsletter you can subscribe to. The newsletter will only send out emails when announcing a new episode.

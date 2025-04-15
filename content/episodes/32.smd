@@ -1,0 +1,22 @@
+---
+.title= "Ghostty",
+.description= "A new terminal emulator written in Zig",
+.date= "2023-09-12T11:00:00.000",
+.author= "Mitchell Hashimoto",
+.layout = "episode.shtml",
+.custom = {
+	"newsletter": "https://buttondown.email/ZigSHOWTIME/archive/ghostty-zig-showtime-32/",
+	"where": "America/Los_Angeles",
+	"vod": "l_qY2p0OH9A",
+	"postponed": false,
+	"type": "talk",
+}
+---
+Mitchell probably doesn't need any introduction, but when it comes specifically to the Zig community he also has has plenty of interesting content he's published on his personal blog:
+
+- [Posts on Zig Internals](https://mitchellh.com/zig/)
+
+While Ghostty, the subject of his talk, is not openly available yet, he also wrote a few devlogs about it:
+
+- [Ghostty Devlogs](https://mitchellh.com/ghostty/)
+

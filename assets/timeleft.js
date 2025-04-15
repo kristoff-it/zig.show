@@ -23,7 +23,7 @@ function timeLeft(toDate = "2020-06-07T15:00:00.000Z") {
     var minutes = Math.floor(totalSeconds / 60) % 60;
     totalSeconds -= minutes * 60;
 
-    var seconds = Math.round(totalSeconds % 60);
+    var seconds = Math.floor(totalSeconds % 60);
 
     return {
         days,
@@ -32,3 +32,39 @@ function timeLeft(toDate = "2020-06-07T15:00:00.000Z") {
         seconds
     };
 }
+
+function updateCountdown() {
+  var countdownDiv = document.getElementById("countdown");
+  if (!countdownDiv) return;
+  
+  let stamp = countdownDiv.dataset.time;
+  if (!stamp) return;
+
+  var timeLeftFromNow = timeLeft(stamp);
+
+  if (timeLeftFromNow === false) {
+    countdownDiv.textContent = "NEXT SHOWTIME WILL BE ANNOUNCED SOON!"
+    countdownDiv.classList.remove("blink");
+    return;
+  }
+
+  if (timeLeftFromNow === true) {
+    countdownDiv.textContent = "LIVE NOW!"
+    countdownDiv.classList.add("blink");
+  } else {
+    const s = timeLeftFromNow.days === 1 ? "" : "S";
+    countdownDiv.textContent =
+        timeLeftFromNow.days + " DAY"+s+" "
+      + timeLeftFromNow.hours.toString().padStart(2, '0') + "h:"
+      + timeLeftFromNow.minutes.toString().padStart(2, '0') + "m:"
+      + timeLeftFromNow.seconds.toString().padStart(2, '0') + "s";
+  } 
+
+  setTimeout(runUpdateTimeout, 100);
+}
+
+function runUpdateTimeout() {
+  window.requestAnimationFrame(updateCountdown);
+}
+
+updateCountdown();

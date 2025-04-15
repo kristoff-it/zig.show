@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title :text="$site.title"></title>
+    <link rel="icon" type="image/png" href="$site.asset('zig-favicon.png').link()">
+    <link type="text/css" rel="stylesheet" href="$site.asset('style.css').link()">
+    <link type="text/css" rel="stylesheet" href="$site.asset('highlight.css').link()">
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Zig SHOWTIME RSS"
+      href="https://zig.show/episodes/index.xml"
+    >
+    <script defer src="$site.asset('timeleft.js').link()"></script>
+    <super>
+  </head>
+  <body id="body">
+    <a href="/" id="logo-link">
+      <div id="logo">
+        <img id="zig" src="$site.asset('zig.svg').link()" width=130>
+        <h1>SHOWTIME</h1>
+      </div>
+    </a>
+    <nav>
+      <a href="$site.page('episodes').link()">Past Episodes</a>
+       &nbsp; • &nbsp;
+      <a href="$site.page('newsletter').link()">RSS & Newsletter</a>
+       &nbsp; • &nbsp;
+      <a href="$site.page('community').link()">Community</a>
+    </nav>
+    <super>
+  </body>
+</html>

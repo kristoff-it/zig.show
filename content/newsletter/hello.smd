@@ -1,0 +1,11 @@
+---
+.title = "Success!",
+.date = @date("1990-01-01T00:00:00"),
+.author = "Sample Author",
+.layout = "page.shtml",
+.draft = false,
+--- 
+
+You have successfully subscribed to the Zig SHOWTIME newsletter!
+
+Next, check out the [Community page](/community/) to join our Discord and subscribe to the Zig SHOWTIME YouTube channel.

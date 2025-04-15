@@ -1,0 +1,70 @@
+<extend template="base.shtml">
+<head id="head">
+  <style>
+    input[type=submit] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input[type=email], input[type=submit] {
+      /* the following ensures they're all using the same box-model for rendering */
+      -moz-box-sizing: content-box; /* or `border-box` */
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+    input[type=email] {
+      font: inherit;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      
+    }
+    input[type=submit] {
+      background-color: #FFFF54;
+      text-decoration: none;
+      color: #131315;
+      font-size: 1rem;
+      height: 100%;
+      font: inherit;
+      padding: 0 5px;
+      margin: 0;
+    }
+
+    input[type=submit]:hover {
+      background-color: white;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+
+
+    body {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    form {
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+    }
+  </style>
+</head>
+<body id="body">
+  <h1 :text="$page.title"></h1>
+  <div :html="$page.content()"></div>
+  <div>
+    <form
+      action="https://buttondown.email/api/emails/embed-subscribe/ZigSHOWTIME"
+      method="post"
+      class="embeddable-buttondown-form flex"
+    >
+      <input type="hidden" value="1" name="embed">
+      <input type="email" name="email" id="bd-email" placeholder="your@email.com" style="padding-left: 5px;"><input type="submit" value="Subscribe">
+    </form>
+  </div>
+  <a id="archive" class="button" target="_blank" href="https://buttondown.email/ZigSHOWTIME/archive">READ PAST ISSUES</a>
+</body>

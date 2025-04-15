@@ -1,0 +1,20 @@
+---
+.title= "Buzz",
+.description= "A lightweight scripting\nlanguage written in Zig",
+.date= "2023-09-21T21:30:00.000",
+.author= "Benoit Giannangeli",
+.layout = "episode.shtml",
+.custom = {
+	"type": "talk",
+	"where": "Europe/Berlin",
+	"newsletter": "https://buttondown.email/ZigSHOWTIME/archive/33/",
+	"vod": "y0ZhCG_l4xE",
+	"postponed": false,
+}
+---
+Buzz is a lightweight language written in Zig that 
+compiles to bytecode and runs in a JITted VM.
+
+You can learn more on the official website:
+
+https://buzz-lang.dev/

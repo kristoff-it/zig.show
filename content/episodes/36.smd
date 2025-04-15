@@ -1,0 +1,14 @@
+---
+.title= "Zig",
+.description= "Roadmap 2024",
+.author= "Andrew Kelley",
+.date= "2024-01-26T11:00:00.000",
+.layout = "episode.shtml",
+.custom = {
+	"type": "talk",
+	"where": "America/Los_Angeles",
+	"newsletter": "https://buttondown.email/ZigSHOWTIME/archive/36/",
+	"vod": "5eL_LcxwwHg",
+	"postponed": false,
+},
+---

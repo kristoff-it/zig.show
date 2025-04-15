@@ -1,0 +1,102 @@
+<extend template="base.shtml">
+<head id="head">
+  <style>
+    body {
+        align-items: center;
+        text-align: center;
+    }
+
+    #author {
+      color: #ffff54;
+      margin: 0;
+    }
+    #desc {
+      margin: 0;
+    }
+
+    #upcoming {
+      display:block;
+      text-decoration: none;
+      border: 2px dashed #aaa;
+      margin:20px;
+      padding: 10px 15px;
+    }
+
+    #upcoming:hover {
+      border-color: white;
+    }
+
+
+    .twitch {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border: 2px dashed white;
+      margin-top:25px;
+    }
+  </style>
+</head>
+<body id="body">
+  <div style="text-align:justify;" :html="$page.content()"></div>
+  <div :if="$site.page('episodes').subpages().first?()">
+    <a id="upcoming" href="$if.link()">
+      <h5 id="author">
+        <span class="date" :text="$if.link().basename().prefix('#')"></span>
+        <span style="color:#eee;">-</span>
+        <span
+          class="date"
+          :text="$if.date.format('Jan 02, 2006')"
+        ></span>
+        <span style="color:#eee;">-</span>
+        <span class="date" :text="$if.author"></span>
+      </h5>
+      <h1 id="title" :text="$if.title"></h1>
+      <h4 id="desc" :text="$if.description"></h4>
+    </a>
+    <ctx :if="$if.date.lt($build.generated).not()">
+      <div>
+        <h3
+          style="margin:0;"
+        >Upcoming Episode</h3>
+        <span class="date" style="color:#eee; font-weight:bold;" :text="$if.date.format('Monday, 2nd of January')">
+        </span>
+        <br>
+        <ctx :loop="$page.custom.get('locations')">
+          <ctx date="$if.date.in($loop.it)">
+            <ctx same_day="$if.date.format('Mon').eql($ctx.date.format('Mon'))">
+              <span
+                class="date"
+                :text="$ctx.date.format($ctx.same_day.then('3p MST', '3p MST (Mon)'))"
+              ></span>
+              <span style="color:#eee" :if="$loop.last.not()">/</span>
+            </ctx>
+          </ctx>
+        </ctx>
+      </div>
+      <div id="countdown" data-time="$if.date.formatHTTP()"></div>
+    </ctx>
+    <div id="yt" :if="$if.custom.get?('vod')">
+      <a class="button" href="$if.prefix('https://youtu.be/')" target="_blank">
+        Watch on YouTube
+      </a>
+    </div>
+  </div>
+  <div class="twitch">
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <div id="twitch-player"></div>
+    <style>
+      #twitch-player iframe {
+					aspect-ratio: 16 / 10;
+					width: 100%;
+                    display:block;
+				}
+    </style>
+    <script type="text/javascript">
+      var options = {
+
+					channel: "kristoff_it",
+				};
+				var player = new Twitch.Player("twitch-player", options);
+				player.setVolume(0.5);
+    </script>
+  </div>
+</body>

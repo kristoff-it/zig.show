@@ -1,0 +1,11 @@
+---
+.title = "Email Confirmation",
+.date = @date("1990-01-01T00:00:00"),
+.author = "Sample Author",
+.layout = "page.shtml",
+.draft = false,
+--- 
+Please confirm your email address to start receiving the Zig SHOWTIME
+newsletter.
+
+You should have received an email with the activation link.

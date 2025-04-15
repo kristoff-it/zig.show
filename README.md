@@ -1,1 +1,3 @@
-# zigshowtime.github.io
+# Zig SHOWTIME official website
+
+https://zig.show

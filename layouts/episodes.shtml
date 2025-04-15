@@ -1,0 +1,70 @@
+<extend template="base.shtml">
+<head id="head">
+  <style>
+    h1 {
+      text-align: center;
+    }
+    .date {
+      font-size: 0.9em;
+    }
+    
+    .title h2{
+      margin-top: 0;
+    }
+
+    a.episode {
+      display: block;
+      box-sizing: border-box;
+      text-decoration: none;
+      margin-bottom: 25px;
+      padding: 5px 10px;
+      border: 2px dashed #131315;
+    }
+
+    a.episode:hover {
+      border-color: white;
+    }
+
+    a.episode h2 {
+      margin: 0;
+      color: #ffff54;
+    }
+
+    a.episode span {
+      color: #ffff54;
+    }
+
+    a.episode .title {
+      color: #fff;
+    }
+
+    h4 {
+      margin: 0;
+      color: 
+    }
+  </style>
+</head>
+<body id="body">
+  <h1 :text="$page.title"></h1>
+  <div :html="$page.content()"></div>
+  <div :loop="$page.subpages()">
+    <a class="episode" href="$loop.it.link()">
+      <span class="date" :text="$loop.it.link().basename().prefix('#')"></span>
+      -
+      <span
+        class="date"
+        :text="$loop.it.date.format('Jan 02, 2006')"
+      ></span>
+      <span style="color:#eee;">-</span>
+      <span class="date" :text="$loop.it.author"></span>
+      <h2>
+        <span class="title" :text="$loop.it.title"></span>
+      </h2>
+      <h4 :text="$loop.it.description"></h4>
+    </a>
+  </div>
+  <div>
+    <hr>
+    <a href="https://www.youtube.com/watch?v=Unq712gqu2U&list=PL5AY2Vv6EsfREBKlX-WIrahKOGCCj-FuC">Episodes 0-31</a>
+  </div>
+</body>

@@ -1,0 +1,111 @@
+<extend template="base.shtml">
+<head id="head">
+  <style>
+    #prev-next {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-top: 40px;
+    }
+
+    #show-notes,
+    #notice {
+      border: 3px dashed white;
+      padding: 10px 25px;
+      max-width: 700px;
+      align-self: center;
+      text-align: justify;
+    }
+
+    #notice {
+      border-color: darkred;
+    }
+
+    #show-notes a,
+    #notice a {
+      color: white;
+    }
+
+    #show-notes ul,
+    #notice a {
+      list-style: none;
+      padding: 0;
+    }
+
+    blockquote {
+      font-style: italic;
+    }
+
+
+    #yt {
+      width: 100%;
+      display:flex;
+      justify-content:center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body id="body">
+  <h5 id="author">
+    <span class="date" :text="$page.link().basename().prefix('#')"></span>
+    <span style="color:#eee;">-</span>
+    <span
+      class="date"
+      :text="$page.date.format('Jan 02, 2006')"
+    ></span>
+    <span style="color:#eee;">-</span>
+    <span class="date" :text="$page.author"></span>
+  </h5>
+  <h1 id="title" :text="$page.title"></h1>
+  <h4 id="desc" :text="$page.description"></h4>
+  <ctx :if="$page.date.lt($build.generated).not()" idx="$site.page('')">
+    <h3 style="margin:0; ">Upcoming Episode</h3>
+    <div style="text-align:center;">
+      <span class="date" style="color:#eee; font-weight:bold;" :text="$page.date.format('Monday, January 2nd')">
+      </span>
+      <br>
+      <ctx :loop="$ctx.idx.custom.get('locations')">
+        <ctx date="$page.date.in($loop.it)">
+          <ctx same_day="$page.date.format('Mon').eql($ctx.date.format('Mon'))">
+            <span
+              class="date"
+              :text="$ctx.date.format($ctx.same_day.then('3p MST', '3p MST (Mon)'))"
+            ></span>
+            <span style="color:#eee" :if="$loop.last.not()">/</span>
+          </ctx>
+        </ctx>
+      </ctx>
+    </div>
+    <div id="countdown" data-time="$page.date.formatHTTP()"></div>
+  </ctx>
+  <div id="yt" :if="$page.custom.get?('vod')">
+    <a class="button" href="$if.prefix('https://youtu.be/')" target="_blank">
+      Watch on YouTube
+    </a>
+  </div>
+  <div id="show-notes">
+    <h2 style="text-align:center;margin-top:15px">SHOW NOTES</h2>
+    <ctx notes="$page.content()">
+      <ctx :if="$ctx.notes.len().gt(5)" :html="$ctx.notes"></ctx>
+      <ctx :if="$ctx.notes.len().gt(5).not()">
+        <p>
+          No notes
+        </p>
+      </ctx>
+    </ctx>
+  </div>
+  <div id="prev-next">
+    <div :if="$page.prevPage?()">
+      <a href="$if.link()">
+        ←
+        <span :text="$if.title"></span>
+      </a>
+    </div>
+    <div :if="$page.nextPage?()">
+      <a href="$if.link()">
+        <span :text="$if.title"></span>
+        →
+      </a>
+    </div>
+  </div>
+</body>

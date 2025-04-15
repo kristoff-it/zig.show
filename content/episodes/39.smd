@@ -1,0 +1,18 @@
+---
+.title= "DVUI",
+.description= "Immediate Mode GUI for Zig!",
+.date= "2025-02-25T11:00:00.000",
+.author= "David Vanderson",
+.layout = "episode.shtml",
+.custom = {
+	"type": "talk",
+	"where": "America/New_York",
+	"newsletter": "https://buttondown.email/ZigSHOWTIME/archive/39/",
+	"vod": "B9dwuBXmTW0",
+	"postponed": false,
+},
+---
+
+[Online demo](https://david-vanderson.github.io/)
+
+[Code](https://github.com/david-vanderson/dvui)

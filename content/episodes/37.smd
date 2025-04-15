@@ -1,0 +1,22 @@
+---
+.title= "Microscope",
+.description= "A new debugger written in Zig from scratch!",
+.author= "Jim Calabro",
+.date= "2025-01-31T15:00:00.000",
+.layout = "episode.shtml",
+.custom = {
+	"type": "talk",
+	"where": "America/New_York",
+	"newsletter": "https://buttondown.email/ZigSHOWTIME/archive/37/",
+	"vod": "stWBTv6grBc",
+	"postponed": false,
+},
+---
+
+It's written with a greek mu letter (uscope) but my font doesn't support it, sorry Jim!
+
+Announcement blog post:  
+https://www.calabro.io/uscope
+
+Source code:  
+https://github.com/jcalabro/uscope
