@@ -1,0 +1,26 @@
+---
+.title= "Zig",
+.description= "Roadmap 2026",
+.author= "Andrew Kelley",
+.date= "2025-07-02T16:00:00.000",
+.layout = "episode.shtml",
+.custom = {
+	"type": "talk",
+	"where": "Europe/Paris",
+	//"vod": "WU45hNi_s7Y",
+	"postponed": false,
+	"draft": false,
+},
+---
+Let's sit down for a chat with Andrew Kelley to talk about the Zig Roadmap for 2026!
+
+This is going to be a very interesting episode for those of you who are interested in following along the Zig journey.
+
+Try to be present live if you want to see your questions answered by Andrew!
+
+Topics we might touch upon:
+
+- Zig compiler performance
+- Reviving async/await
+- Native coverage-guided fuzzing support
+- Community & finances

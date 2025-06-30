@@ -26,7 +26,10 @@
       color: white;
     }
 
-    #show-notes ul,
+    #show-notes ul {
+      list-style: square;
+    }
+
     #notice a {
       list-style: none;
       padding: 0;
