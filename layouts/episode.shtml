@@ -88,7 +88,7 @@
   </div>
   <div id="twitch" :if="$page.date.gt($build.generated)">
     <a class="button" href="https://twitch.tv/kristoff_it" target="_blank">
-      Twitch Livestream
+      Watch on Twitch
     </a>
   </div>
   <div id="show-notes">

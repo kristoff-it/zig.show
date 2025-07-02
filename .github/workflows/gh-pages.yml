@@ -1,6 +1,7 @@
 name: Deploy the website to Github Pages
 
 on:
+  schedule: [{cron: "0 0 23 ? * * *"}]
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
