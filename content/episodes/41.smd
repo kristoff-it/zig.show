@@ -2,7 +2,7 @@
 .title= "Zig",
 .description= "Roadmap 2026",
 .author= "Andrew Kelley",
-.date= "2025-07-02T16:00:00.000",
+.date= "2025-07-03T16:00:00.000",
 .layout = "episode.shtml",
 .custom = {
 	"type": "talk",
