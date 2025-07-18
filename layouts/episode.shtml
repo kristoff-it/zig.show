@@ -72,7 +72,7 @@
           <ctx same_day="$page.date.format('Mon').eql($ctx.date.format('Mon'))">
             <span
               class="date"
-              :text="$ctx.date.format($ctx.same_day.then('3p MST', '3p MST (Mon)'))"
+              :text="$ctx.date.format($ctx.same_day.then('3pm MST', '3pm MST (Mon)'))"
             ></span>
             <span style="color:#eee" :if="$loop.last.not()">/</span>
           </ctx>
