@@ -1,0 +1,18 @@
+---
+.title= "Asynchrony",
+.description= "Is NOT Concurrency!",
+.author= "Loris Cro & Andrew Kelley",
+.date= "2025-07-21T17:00:00.000",
+.layout = "episode.shtml",
+.custom = {
+	"type": "talk",
+	"where": "Europe/Paris",
+	//"vod": "x3hOiOcbgeA",
+	"postponed": false,
+	"draft": false,
+},
+---
+A live overview of Zig's new async I/O design in order to put to the test all the examples shown in [my latest blog post](https://kristoff.it/blog/asynchrony-is-not-concurrency/) also titled "Asynchrony is not Concurrency".
+
+Andrew joins to answer all the hard questions.
+
