@@ -33,6 +33,9 @@ jobs:
         uses: kristoff-it/setup-zine@v1
         with:
           version: v0.10.3
+          
+      - name: Zine Version
+        run: zine version
 
       - name: Build
         run: zine release
